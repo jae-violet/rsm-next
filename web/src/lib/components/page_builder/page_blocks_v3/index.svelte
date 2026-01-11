@@ -39,7 +39,7 @@
 
 <script lang="ts">
 	// import components & types
-	//import DataFeed, { type DataFeedData } from "./organisms/DataFeed.svelte";
+	import DataFeed, { type DataFeedData } from "./organisms/DataFeed.svelte";
 	import CardRow, { type CardRowData } from "./organisms/CardRow.svelte";
 	import Hero, { type HeroData } from "./organisms/Hero.svelte";
 
@@ -56,6 +56,8 @@
 			-->
 		{:else if data?.__typename === "page_blocks_v3_organism_card_row"}
 			<CardRow {data} {projectData} />
+		{:else if data?.__typename === "page_blocks_v3_organism_data_feed"}
+			<DataFeed {data} {projectData} />
 		{:else if data?.__typename === "page_blocks_v3_organism_hero"}
 			<Hero {data} project />
 		{:else}
