@@ -182,12 +182,7 @@
 			</a>
 		{:else}
 			{#if loadCount < totalLimit}
-				<DottedArrowHover on:click={loadMore} text_alignment="right">
-					<p>
-						View More
-						<DottedArrow />
-					</p>
-				</DottedArrowHover>
+				
 			{/if}
 		{/if}
 	</div>

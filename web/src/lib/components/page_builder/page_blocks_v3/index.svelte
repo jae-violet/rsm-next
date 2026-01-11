@@ -39,7 +39,7 @@
 
 <script lang="ts">
 	// import components & types
-	import DataFeed, { type DataFeedData } from "./organisms/DataFeed.svelte";
+	import DataFeed, { type DataFeedData } from "./organisms/DataFeed/index.svelte";
 	import CardRow, { type CardRowData } from "./organisms/CardRow.svelte";
 	import Hero, { type HeroData } from "./organisms/Hero.svelte";
 
