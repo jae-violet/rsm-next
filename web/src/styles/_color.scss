@@ -1,0 +1,12 @@
+@mixin colors {
+	--COLOR-BLACK: #1a1818;
+	--COLOR-BG-LIGHT: #cbcdd1;
+	--COLOR-MID-GRAY: #a2a4a7;
+	--COLOR-DIM-GRAY: #575757;
+	--COLOR-ORANGE: #ed4d29;
+	--COLOR-ORANGE-HOVER: #ce3512;
+}
+
+@mixin body {
+	background-color: var(--bg-color, white);
+}

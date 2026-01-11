@@ -1,0 +1,24 @@
+@use 'layout';
+@use 'typography';
+@use 'color';
+@use 'animation';
+@use 'elements';
+
+:root {
+	@include typography.font-sizes;
+	@include typography.fonts;
+	@include color.colors;
+	@include layout.spacing;
+	@include layout.grids;
+	@include animation.animations;
+}
+
+:global {
+	body {
+		@include layout.body;
+		@include typography.body;
+		@include color.body;
+	}
+
+	@include layout.layout-blocks;
+}

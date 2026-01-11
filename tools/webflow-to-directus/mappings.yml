@@ -1,0 +1,348 @@
+---
+files:
+  rsmdesign.com - Careers:
+    Published On: published_on
+    Collection ID: collection_id
+    Name: name
+    Slug: slug
+    Created On: date_created
+    Updated On: date_updated
+    SEO Page Description: seo_page_description
+    Job Description: job_description
+    Item ID: item_id
+  rsmdesign.com - Awards:
+    "Award, Designation": "award_designation"
+    Item ID: item_id
+    Published On: published_on
+    Created On: date_created
+    Project name: project_name
+    Slug: slug
+    Collection ID: collection_id
+    Awards page sort priority: awards_page_sort
+    Updated On: date_updated
+    Year: year
+    Project: project
+    Name: name
+    "Award, Designation short": "award_designation_short"
+    Project location: project_location
+    Project page sort priority: project_page_sort
+  rsmdesign.com - News Posts:
+    SEO Page Description: seo_page_description
+    Topics: topics
+    Updated On: date_updated
+    Item ID: item_id
+    Hero Image Description: hero_image_description
+    Grid Image Description: grid_image_description
+    Featured: featured
+    Published On: published_on
+    Grid Image: grid_image
+    Topics List: topics_list
+    Published Date: published_date
+    Authors: authors
+    Slug: slug
+    Hero Image: hero_image
+    Created On: date_created
+    Hero Image Crop Attachment: hero_image_crop_attachment
+    Hero Video: hero_video
+    Collection ID: collection_id
+    Post Body: post_body
+    Article Preview: article_preview
+    Post Title: post_title
+  rsmdesign.com - Hidden Services:
+    Item ID: item_id
+    Published On: published_on
+    Grid Image: grid_image
+    Updated On: date_updated
+    Team Leaders: team_leaders
+    Related Articles: related_articles
+    Slug: slug
+    Hero Images: hero_images
+    SEO Page Description: seo_page_description
+    Name: name
+    Collection ID: collection_id
+    Overview: overview
+    Created On: date_created
+    Sub-Services: sub_services
+  rsmdesign.com - Hidden Markets:
+    SEO Page Description: seo_page_description
+    Sub-Services: sub_services
+    Related Articles: related_articles
+    Team Leaders: team_leaders
+    Collection ID: collection_id
+    Name: name
+    Created On: date_created
+    Grid Image: grid_image
+    Overview: overview
+    Updated On: date_updated
+    Slug: slug
+    Published On: published_on
+    Item ID: item_id
+    Hero Images: hero_images
+  rsmdesign.com - Geographical Regions:
+    Related Articles: related_articles
+    Name: name
+    Item ID: item_id
+    Overview: overview
+    Hero Images: hero_images
+    Non-Linked Completed Projects: non_linked_completed_projects
+    Grid Image: grid_image
+    Grid Image Description: grid_image_description
+    Non-Linked Services: non_linked_services
+    Updated On: date_updated
+    Sub-Services: sub_services
+    Created On: date_created
+    Name (View More Button): name_(view_more_button)
+    Slug: slug
+    Collection ID: collection_id
+    Published On: published_on
+    Featured Projects: featured_projects
+    Region filter: region_filter
+    Name (Search Auto-Complete): name_(search_auto_complete)
+    Completed Projects Info: completed_projects_info
+    Project Locations: project_locations
+    SEO Page Description: seo_page_description
+  rsmdesign.com - Projects:
+    "Sort Priority (Services): Criteria & Guidelines": "sort_priority_(services):_criteria_&_guidelines"
+    Location: location
+    Geographical Region: geographical_region
+    "Sort Priority (Services): Graphic Architecture": "sort_priority_(services):_graphic_architecture"
+    "Sort Priority (Markets): Cultural Design": "sort_priority_(markets):_cultural_design"
+    Services List: services_list
+    "Sort Priority (Markets): Residential Community": "sort_priority_(markets):_residential_community"
+    "Sort Priority (Services): Master Sign Programs": "sort_priority_(services):_master_sign_programs"
+    "Sort Priority (Markets): Food & Beverage": "sort_priority_(markets):_food_&_beverage"
+    "Sort Priority (Services): Donor Recognition": "sort_priority_(services):_donor_recognition"
+    "Sort Priority (Markets): Retail Design": "sort_priority_(markets):_retail_design"
+    Item ID: item_id
+    "Sort Priority (Markets): Streetscape Design": "sort_priority_(markets):_streetscape_design"
+    "Sort Priority (Markets): Healthcare Design": "sort_priority_(markets):_healthcare_design"
+    "Sort Priority (Markets): Civic Design": "sort_priority_(markets):_civic_design"
+    Hero Image: hero_image
+    "Sort Priority (Services): Digital Integration": "sort_priority_(services):_digital_integration"
+    Design Awards: design_awards
+    Collaborators: collaborators
+    "Sort Priority (Markets): Sports & Entertainment": "sort_priority_(markets):_sports_&_entertainment"
+    "Sort Priority (Markets): Transit Design": "sort_priority_(markets):_transit_design"
+    Project Title (Short): project_title_(short)
+    Client: client
+    Slug: slug
+    Published On: published_on
+    SEO Page Description: seo_page_description
+    "Sort Priority: General": "sort_priority:_general"
+    "Sort Priority (Markets): Mixed Use Design": "sort_priority_(markets):_mixed_use_design"
+    Project Title: project_title
+    "Sort Priority (Services): Environmental Graphic Design": "sort_priority_(services):_environmental_graphic_design"
+    "Sort Priority (Services): Wayfinding Signage": "sort_priority_(services):_wayfinding_signage"
+    "Sort Priority (Services): Project Visioning": "sort_priority_(services):_project_visioning"
+    Project Opening Date: project_opening_date
+    Project Description: project_description
+    Studio Locations: studio_locations
+    Grid Image: grid_image
+    "Sort Priority (Services): Branding & Logo Design": "sort_priority_(services):_branding_&_logo_design"
+    "Sort Priority (Services): Exhibit Design": "sort_priority_(services):_exhibit_design"
+    Created On: date_created
+    Hero Image Crop Attachment: hero_image_crop_attachment
+    Home Page Slider: home_page_slider
+    Misc Filters List: misc_filters_list
+    Updated On: date_updated
+    "Sort Priority (Markets): Hospitality Design": "sort_priority_(markets):_hospitality_design"
+    Non-Linked Services: non_linked_services
+    "Sort Priority (Services): Placemaking": "sort_priority_(services):_placemaking"
+    Grid Image Description: grid_image_description
+    "Sort Priority (Services): Analysis & Strategy": "sort_priority_(services):_analysis_&_strategy"
+    "Sort Priority (Markets): Workplace Design": "sort_priority_(markets):_workplace_design"
+    Project Body: project_body
+    "Sort Priority (Markets): Education Design": "sort_priority_(markets):_education_design"
+    Markets: markets
+    Non-Linked Markets: non_linked_markets
+    "Sort Priority (Markets): Waterfront Design": "sort_priority_(markets):_waterfront_design"
+    "Sort Priority (Services): Public Art & Murals": "sort_priority_(services):_public_art_&_murals"
+    Collection ID: collection_id
+    Services: services
+    "Sort Priority (Markets): Park Design": "sort_priority_(markets):_park_design"
+    Slider Images: slider_images
+    Hero Video ID: hero_video_id
+    Markets List: markets_list
+    Hero Image Description: hero_image_description
+    Hidden Services: hidden_services
+    Regions and Studio Locations List: regions_and_studio_locations_list
+    "Sort Priority (Markets): Multifamily Design": "sort_priority_(markets):_multifamily_design"
+    "Sort Priority (Markets): Parking Garage Design": "sort_priority_(markets):_parking_garage_design"
+    Hidden Markets: hidden_markets
+  rsmdesign.com - News Topics:
+    Slug: slug
+    Published On: published_on
+    Name: name
+    Updated On: date_updated
+    Created On: date_created
+    Collection ID: collection_id
+    Item ID: item_id
+  rsmdesign.com - Books:
+    Banner Image Description: banner_image_description
+    Tag: tag
+    Book description: book_description
+    Slug: slug
+    Authors: authors
+    Weight (lbs): weight_(lbs)
+    Updated On: date_updated
+    Amazon link: amazon_link
+    Visual Profile Books link: visual_profile_books_link
+    Title: title
+    Home Page Tagline: home_page_tagline
+    Grid Image Description: grid_image_description
+    Format: format
+    Banner Image Mobile: banner_image_mobile
+    Home Page Blurb: home_page_blurb
+    Body: body
+    Page count: page_count
+    Published On: published_on
+    Banner Image: banner_image
+    Hero Image Description: hero_image_description
+    SEO Page Description: seo_page_description
+    Banner Image Mobile Description: banner_image_mobile_description
+    Collection ID: collection_id
+    Item ID: item_id
+    Created On: date_created
+    Grid Image: grid_image
+    Hero Image: hero_image
+  rsmdesign.com - Testimonials:
+    Slug: slug
+    Created On: date_created
+    Quote Attribution Job Title: quote_attribution_job_title
+    Updated On: date_updated
+    Company Name: company_name
+    Published On: published_on
+    Collection ID: collection_id
+    Quote: quote
+    Banner Image Description: banner_image_description
+    Item ID: item_id
+    Associated Project: associated_project
+    Quote Attribution: quote_attribution
+    Banner Image: banner_image
+    Sort Priority: sort_priority
+  rsmdesign.com - Studio Locations:
+    SEO Page Description: seo_page_description
+    Office Director: office_director
+    Address: address
+    Sort Priority: sort_priority
+    Contact Phone: contact_phone
+    Hero Images: hero_images
+    Published On: published_on
+    Studio Filter: studio_filter
+    Contact Email: contact_email
+    Location (no state): location_(no_state)
+    Hubspot Tracking Email: hubspot_tracking_email
+    Location (full state): location_(full_state)
+    Collection ID: collection_id
+    Related Articles: related_articles
+    Featured Projects: featured_projects
+    Name (Search Auto-Complete): name_(search_auto_complete)
+    NoIndex: no_index
+    Grid Image: grid_image
+    Created On: date_created
+    Location (state abbreviation): location_(state_abbreviation)
+    Item ID: item_id
+    Updated On: date_updated
+    Overview: overview
+    Slug: slug
+    Name (View More Button): name_(view_more_button)
+  rsmdesign.com - Team:
+    Contact Email: contact_email
+    "Speaking, Publications & Abstract Topics": "speaking,_publications_&_abstract_topics"
+    Item ID: item_id
+    Hubspot Tracking Email: hubspot_tracking_email
+    Title Ranking: title_ranking
+    Updated On: date_updated
+    Short Title: short_title
+    Banner Grid Image B&W: banner_grid_image_b&w
+    Education: education
+    Banner Grid Image Description: banner_grid_image_description
+    Contact Phone 2 Extension: contact_phone_2_extension
+    Published On: published_on
+    Headshot: headshot
+    Sort Priority: sort_priority
+    NoIndex: no_index
+    Collection ID: collection_id
+    Contact Phone 1: contact_phone_1
+    Display latest articles?: display_latest_articles?
+    Name: name
+    Bio: bio
+    LinkedIn URL: linked_in_url
+    Banner Grid Image Color: banner_grid_image_color
+    Banner Grid Image Sort: banner_grid_image_sort
+    Slug: slug
+    Created On: date_created
+    Contact Phone 2: contact_phone_2
+    Expertise: expertise
+    Recent Projects: recent_projects
+    Contact Phone 1 Extension: contact_phone_1_extension
+    Featured Image Description: featured_image_description
+    Headshot Description: headshot_description
+    Honors: honors
+    SEO Page Description (principals only): seo_page_description_(principals_only)
+    Featured Image: featured_image
+    Full Title: full_title
+    Instagram URL: instagram_url
+  rsmdesign.com - Services:
+    Team Leaders: team_leaders
+    Published On: published_on
+    Overview: overview
+    Medium Name (Expertise Page): medium_name_(expertise_page)
+    Name (Filter Button): name_(filter_button)
+    Created On: date_created
+    Updated On: date_updated
+    Sub-Services Truncated: sub_services_truncated
+    Grid Image Description: grid_image_description
+    Sub-Services: sub_services
+    Grid Image: grid_image
+    Item ID: item_id
+    Collection ID: collection_id
+    Related Articles: related_articles
+    Slug: slug
+    Short Name (Home Page): short_name_(home_page)
+    Name (View More Button): name_(view_more_button)
+    Hero Images: hero_images
+    Featured Projects: featured_projects
+    Name (Service Page): name_(service_page)
+    Sort Priority: sort_priority
+    SEO Page Description: seo_page_description
+    Default Sort: default_sort
+  rsmdesign.com - Markets:
+    Name (Filter Button): name_(filter_button)
+    Updated On: date_updated
+    Name (Market Page): name_(market_page)
+    Overview: overview
+    Short Name (Home Page): short_name_(home_page)
+    Related Articles: related_articles
+    Sort Priority: sort_priority
+    Sub-Services: sub_services
+    Medium Name (Expertise Page): medium_name_(expertise_page)
+    Default sort: default_sort
+    Slug: slug
+    SEO Page Description: seo_page_description
+    Grid Image Description: grid_image_description
+    Collection ID: collection_id
+    Hero Images: hero_images
+    Team Leaders text: team_leaders_text
+    Featured Projects: featured_projects
+    Published On: published_on
+    Grid Image: grid_image
+    Team Leaders: team_leaders
+    Item ID: item_id
+    Created On: date_created
+    Name (View More Button): name_(view_more_button)
+  rsmdesign.com - Misc:
+    Collection ID: collection_id
+    Created On: date_created
+    Name: name
+    Updated On: date_updated
+    Slug: slug
+    Overview: overview
+    Grid Image: grid_image
+    Sub-Services: sub_services
+    Published On: published_on
+    SEO Page Description: seo_page_description
+    Team Leaders: team_leaders
+    Projects: projects
+    Grid Image Description: grid_image_description
+    Item ID: item_id

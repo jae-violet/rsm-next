@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Awards",
+    "slug": "awards",
+    "collection_id": "5ef105f5ed1dd0ca9428d749",
+    "item_id": "5ef10623b81a822746e5463f",
+    "created_on": "Mon Jun 22 2020 19:27:31 GMT+0000 (Coordinated Universal Time)",
+    "updated_on": "Mon Jun 22 2020 19:27:31 GMT+0000 (Coordinated Universal Time)",
+    "published_on": "Mon Jun 22 2020 19:52:23 GMT+0000 (Coordinated Universal Time)"
+  },
+  {
+    "name": "Education",
+    "slug": "education",
+    "collection_id": "5ef105f5ed1dd0ca9428d749",
+    "item_id": "5ef106188190db6344c11e2d",
+    "created_on": "Mon Jun 22 2020 19:27:20 GMT+0000 (Coordinated Universal Time)",
+    "updated_on": "Mon Jun 22 2020 19:27:20 GMT+0000 (Coordinated Universal Time)",
+    "published_on": "Mon Jun 22 2020 19:52:23 GMT+0000 (Coordinated Universal Time)"
+  },
+  {
+    "name": "Press",
+    "slug": "press",
+    "collection_id": "5ef105f5ed1dd0ca9428d749",
+    "item_id": "5ef1061f99676814c51bac76",
+    "created_on": "Mon Jun 22 2020 19:27:27 GMT+0000 (Coordinated Universal Time)",
+    "updated_on": "Wed Aug 12 2020 11:40:41 GMT+0000 (Coordinated Universal Time)",
+    "published_on": "Wed Aug 12 2020 12:00:41 GMT+0000 (Coordinated Universal Time)"
+  },
+  {
+    "name": "Project Updates",
+    "slug": "project-updates",
+    "collection_id": "5ef105f5ed1dd0ca9428d749",
+    "item_id": "5ef1060c3803066b622d7695",
+    "created_on": "Mon Jun 22 2020 19:27:08 GMT+0000 (Coordinated Universal Time)",
+    "updated_on": "Wed Aug 12 2020 11:40:29 GMT+0000 (Coordinated Universal Time)",
+    "published_on": "Wed Aug 12 2020 12:00:41 GMT+0000 (Coordinated Universal Time)"
+  },
+  {
+    "name": "RSM Culture",
+    "slug": "rsm-culture",
+    "collection_id": "5ef105f5ed1dd0ca9428d749",
+    "item_id": "5ef1061342aafd8e21362a10",
+    "created_on": "Mon Jun 22 2020 19:27:15 GMT+0000 (Coordinated Universal Time)",
+    "updated_on": "Wed Aug 12 2020 11:40:19 GMT+0000 (Coordinated Universal Time)",
+    "published_on": "Wed Aug 12 2020 12:00:41 GMT+0000 (Coordinated Universal Time)"
+  }
+]

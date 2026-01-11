@@ -1,0 +1,18 @@
+{
+  "name": "@rsmdesign/rsmdesign",
+  "engines": {
+    "node": "18.12.1"
+  },
+  "scripts": {
+    "postinstall": "npm run install:cms && npm run install:web",
+    "install:cms": "cd cms && npm install",
+    "install:web": "cd web && npm install",
+    "build:cms": "cd cms && npm run build",
+    "build:web": "cd web && npm run build",
+    "start:cms": "cd cms && npm run start",
+    "start:web": "cd web && npm run start"
+  },
+  "dependencies": {
+    "log-update": "^5.0.1"
+  }
+}

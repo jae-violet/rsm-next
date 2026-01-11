@@ -1,0 +1,1385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+<url>
+  <loc>https://rsmdesign.com/</loc>
+  <lastmod>2025-01-03T21:08:20+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/about</loc>
+  <lastmod>2025-01-03T21:08:20+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work</loc>
+  <lastmod>2025-01-03T21:08:23+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/expertise</loc>
+  <lastmod>2025-01-03T21:08:20+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/contact</loc>
+  <lastmod>2025-01-03T21:08:20+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/news</loc>
+  <lastmod>2025-01-03T21:08:20+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/search</loc>
+  <lastmod>2025-01-03T21:08:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/ovation-hollywood</loc>
+  <lastmod>2025-01-03T21:08:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/book/graphic-connections-in-architecture</loc>
+  <lastmod>2025-01-03T21:08:20+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/services/environmental-graphic-design</loc>
+  <lastmod>2025-01-03T21:08:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/services/branding-logo-design</loc>
+  <lastmod>2025-01-03T21:08:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/services/wayfinding-signage</loc>
+  <lastmod>2025-01-03T21:08:23+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/services/placemaking</loc>
+  <lastmod>2025-01-03T21:08:23+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/services/public-art-murals</loc>
+  <lastmod>2025-01-03T21:08:23+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/services/master-sign-programs</loc>
+  <lastmod>2025-01-03T21:08:23+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/markets/hospitality-design</loc>
+  <lastmod>2025-01-03T21:08:20+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/markets/mixed-use-design</loc>
+  <lastmod>2025-01-03T21:08:20+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/markets/cultural-design</loc>
+  <lastmod>2025-01-03T21:08:20+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/markets/sci-tech-life-science-design</loc>
+  <lastmod>2025-01-03T21:08:20+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/markets/park-design</loc>
+  <lastmod>2025-01-03T21:08:20+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/markets/education-design</loc>
+  <lastmod>2025-01-03T21:08:20+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/markets/healthcare</loc>
+  <lastmod>2025-01-03T21:08:20+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/markets/sports-entertainment</loc>
+  <lastmod>2025-01-03T21:08:20+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/markets/retail-design</loc>
+  <lastmod>2025-01-03T21:08:20+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/markets/food-beverage</loc>
+  <lastmod>2025-01-03T21:08:20+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/markets/civic-design</loc>
+  <lastmod>2025-01-03T21:08:20+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/markets/residential-community</loc>
+  <lastmod>2025-01-03T21:08:20+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/cotton-bowl-stadium</loc>
+  <lastmod>2025-01-03T21:08:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/nashville-yards</loc>
+  <lastmod>2025-01-03T21:08:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/river-street</loc>
+  <lastmod>2025-01-03T21:08:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/services/in-progress</loc>
+  <lastmod>2025-01-03T21:08:23+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/offices/san-clemente</loc>
+  <lastmod>2025-01-03T21:08:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/offices/dallas</loc>
+  <lastmod>2025-01-03T21:08:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/offices/los-angeles</loc>
+  <lastmod>2025-01-03T21:08:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/project-inquiry</loc>
+  <lastmod>2025-01-03T21:08:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/careers</loc>
+  <lastmod>2025-01-03T21:08:20+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/rsm/wbe-design-studio</loc>
+  <lastmod>2025-01-03T21:08:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/news/principle-centered-design</loc>
+  <lastmod>2025-01-03T21:08:21+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/team/suzanne-redmond-schwartz</loc>
+  <lastmod>2025-01-03T21:08:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/team</loc>
+  <lastmod>2025-01-03T21:08:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/team/martin-e-schwartz</loc>
+  <lastmod>2025-01-03T21:08:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/team/stephanie-wills</loc>
+  <lastmod>2025-01-03T21:08:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/team/kyle-richter</loc>
+  <lastmod>2025-01-03T21:08:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/team/jeffrey-hertzler</loc>
+  <lastmod>2025-01-03T21:08:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/team/harry-mark-faia</loc>
+  <lastmod>2025-01-03T21:08:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/team/christy-montgomery</loc>
+  <lastmod>2025-01-03T21:08:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/team/cody-clark</loc>
+  <lastmod>2025-01-03T21:08:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/collaborators</loc>
+  <lastmod>2025-01-03T21:08:20+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/balboa-fun-zone</loc>
+  <lastmod>2025-01-03T21:08:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/ad-ex-dallas-tx</loc>
+  <lastmod>2025-01-03T21:08:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/the-stockyards-fort-worth-texas</loc>
+  <lastmod>2025-01-03T21:08:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/the-monarch-at-hall-park</loc>
+  <lastmod>2025-01-03T21:08:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/alexandria-center-for-life-science</loc>
+  <lastmod>2025-01-03T21:08:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/hall-park</loc>
+  <lastmod>2025-01-03T21:08:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/brentwood-school</loc>
+  <lastmod>2025-01-03T21:08:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/biovista-san-diego</loc>
+  <lastmod>2025-01-03T21:08:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/persea</loc>
+  <lastmod>2025-01-03T21:08:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/capo-brew</loc>
+  <lastmod>2025-01-03T21:08:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/valencia</loc>
+  <lastmod>2025-01-03T21:08:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/Gene-Leahy-Mall-at-the-RiverFront</loc>
+  <lastmod>2025-01-03T21:08:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/kanawha-county-public-library</loc>
+  <lastmod>2025-01-03T21:08:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/buddy-holly-hall-lubbock-texas</loc>
+  <lastmod>2025-01-03T21:08:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/the-farm-allen-texas</loc>
+  <lastmod>2025-01-03T21:08:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/rise-park</loc>
+  <lastmod>2025-01-03T21:08:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/glendale-community-college</loc>
+  <lastmod>2025-01-03T21:08:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/uc-san-diego-dining-hall-2</loc>
+  <lastmod>2025-01-03T21:08:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/rodeo-39</loc>
+  <lastmod>2025-01-03T21:08:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/solis-park</loc>
+  <lastmod>2025-01-03T21:08:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/the-bar-center-at-the-beach</loc>
+  <lastmod>2025-01-03T21:08:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/jack-london-square</loc>
+  <lastmod>2025-01-03T21:08:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/hotel-drover</loc>
+  <lastmod>2025-01-03T21:08:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/hhla</loc>
+  <lastmod>2025-01-03T21:08:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/arkadia-shopping-mall</loc>
+  <lastmod>2025-01-03T21:08:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/fifth-and-broadway</loc>
+  <lastmod>2025-01-03T21:08:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/miami-baywalk</loc>
+  <lastmod>2025-01-03T21:08:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/pacific-city-huntington-beach-ca</loc>
+  <lastmod>2025-01-03T21:08:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/long-beach-exchange-long-beach-ca</loc>
+  <lastmod>2025-01-03T21:08:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/the-shops-at-clearfork-fort-worth-tx</loc>
+  <lastmod>2025-01-03T21:08:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/the-pools-irvine-ca</loc>
+  <lastmod>2025-01-03T21:08:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/awards</loc>
+  <lastmod>2025-01-03T21:08:20+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/services/donor-recognition</loc>
+  <lastmod>2025-01-03T21:08:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/services/digital-integration</loc>
+  <lastmod>2025-01-03T21:08:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/services/exhibit-design</loc>
+  <lastmod>2025-01-03T21:08:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/markets/transit-design</loc>
+  <lastmod>2025-01-03T21:08:20+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/markets/parking-garage-design</loc>
+  <lastmod>2025-01-03T21:08:20+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/markets/waterfront-design</loc>
+  <lastmod>2025-01-03T21:08:20+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/markets/workplace-design</loc>
+  <lastmod>2025-01-03T21:08:20+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/markets/international-design</loc>
+  <lastmod>2025-01-03T21:08:20+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/markets/multifamily-design</loc>
+  <lastmod>2025-01-03T21:08:20+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/careers/environmental-graphic-designer-dallas</loc>
+  <lastmod>2025-01-03T21:08:20+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/careers/environmental-graphic-designer-san-clemente</loc>
+  <lastmod>2025-01-03T21:08:20+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/careers/environmental-graphic-designer-los-angeles</loc>
+  <lastmod>2025-01-03T21:08:20+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/news/the-golf-experience</loc>
+  <lastmod>2025-01-03T21:08:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/news/Fifth-Broadway-Communication-Arts-Typography-Award</loc>
+  <lastmod>2025-01-03T21:08:20+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/news/the-bar-center-by-the-beach-featured-in-interior-design-magazine</loc>
+  <lastmod>2025-01-03T21:08:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/news/san-diego-and-tijuana-announced-as-the-world-design-capital-2024-2025</loc>
+  <lastmod>2025-01-03T21:08:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/news/fort-worth-stockyards-mule-alley-has-been-recognized-in-the-annual-papercity-design-awards</loc>
+  <lastmod>2025-01-03T21:08:21+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/news/ad-ex-design-award-winner-by-the-texas-society-of-architects</loc>
+  <lastmod>2025-01-03T21:08:20+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/news/hollywood-park</loc>
+  <lastmod>2025-01-03T21:08:21+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/what-is-environmental-graphic-design-part-1-the-name-is-confusing/</loc>
+  <lastmod>2025-01-03T21:08:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/services/architectural-graphic-design</loc>
+  <lastmod>2025-01-03T21:08:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/uncommons</loc>
+  <lastmod>2025-01-03T21:08:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/runway-playa-vista-playa-vista-ca</loc>
+  <lastmod>2025-01-03T21:08:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/city-of-dana-point-dana-point-ca</loc>
+  <lastmod>2025-01-03T21:08:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/the-summit-bechtel-reserve</loc>
+  <lastmod>2025-01-03T21:08:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/noma-gateway</loc>
+  <lastmod>2025-01-03T21:08:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/news/what-is-environmental-graphic-design-part-1-the-name-is-confusing</loc>
+  <lastmod>2025-01-03T21:08:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/news/what-is-environmental-graphic-design-part-2-egd-is-about-emotional-connections</loc>
+  <lastmod>2025-01-03T21:08:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/news/what-is-environmental-graphic-design-part-3-egd-can-be-expressed-in-many-ways</loc>
+  <lastmod>2025-01-03T21:08:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/team/steve-luoma</loc>
+  <lastmod>2025-01-03T21:08:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/news/experiential-design</loc>
+  <lastmod>2025-01-03T21:08:21+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/news/what-is-wayfinding</loc>
+  <lastmod>2025-01-03T21:08:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/news/what-is-digital-wayfinding</loc>
+  <lastmod>2025-01-03T21:08:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/lot-579-huntington-beach-ca</loc>
+  <lastmod>2025-01-03T21:08:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/lido-marina-village-newport-ca</loc>
+  <lastmod>2025-01-03T21:08:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/liberty-station-san-diego-ca</loc>
+  <lastmod>2025-01-03T21:08:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/great-park-neighborhoods</loc>
+  <lastmod>2025-01-03T21:08:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/wai-kai</loc>
+  <lastmod>2025-01-03T21:08:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/news/the-placemaking-power-of-ten</loc>
+  <lastmod>2025-01-03T21:08:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/news/connecting-people-to-place-part-1-experiential-design-at-the-long-beach-exchange</loc>
+  <lastmod>2025-01-03T21:08:21+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/news/cultural-districts</loc>
+  <lastmod>2025-01-03T21:08:21+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/news/using-public-art-to-add-value-to-projects</loc>
+  <lastmod>2025-01-03T21:08:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/news/murals-come-to-life-at-rodeo-39</loc>
+  <lastmod>2025-01-03T21:08:21+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/service/architectural-graphic-design</loc>
+  <lastmod>2025-01-03T21:08:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/markets/hotel-signage</loc>
+  <lastmod>2025-01-03T21:08:20+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/markets/resort-signage</loc>
+  <lastmod>2025-01-03T21:08:20+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/service/experiential-design</loc>
+  <lastmod>2025-01-03T21:08:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/news/transformative-healthcare-environments</loc>
+  <lastmod>2025-01-03T21:08:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/markets/sports-stadiums</loc>
+  <lastmod>2025-01-03T21:08:20+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/regions/southern-california</loc>
+  <lastmod>2025-01-03T21:08:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/regions/san-diego-ca</loc>
+  <lastmod>2025-01-03T21:08:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/rosemary-square</loc>
+  <lastmod>2025-01-03T21:08:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/team/paige-terrell-rid</loc>
+  <lastmod>2025-01-03T21:08:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/monet-avenue-rancho-cucamonga-ca</loc>
+  <lastmod>2025-01-03T21:08:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/services/placemaking-design</loc>
+  <lastmod>2025-01-03T21:08:23+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/rsm/donor-recognition</loc>
+  <lastmod>2025-01-03T21:08:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/rsm/digital-integration</loc>
+  <lastmod>2025-01-03T21:08:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/rsm/exhibit-design</loc>
+  <lastmod>2025-01-03T21:08:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/services/architectural-graphic-design/</loc>
+  <lastmod>2025-01-03T21:08:25+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/news/5-key-strategies-for-building-a-brand</loc>
+  <lastmod>2025-01-03T21:08:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/news/creating-social-media-places</loc>
+  <lastmod>2025-01-03T21:08:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/news/environmental-graphic-design-in-the-outdoors</loc>
+  <lastmod>2025-01-03T21:08:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/news/exploring-the-brand-connection</loc>
+  <lastmod>2025-01-03T21:08:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/news/from-transactional-environments-to-transformational-experiences</loc>
+  <lastmod>2025-01-03T21:08:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/news/runways-to-parkways</loc>
+  <lastmod>2025-01-03T21:08:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/miami-baywalk-branding-and-logo-design</loc>
+  <lastmod>2025-01-03T21:08:25+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/news/campus-placemaking-anchoring-students-with-clarity-specificity-and-purpose</loc>
+  <lastmod>2025-01-03T21:08:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/news/crafting-with-context</loc>
+  <lastmod>2025-01-03T21:08:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/news/healing-places-from-within</loc>
+  <lastmod>2025-01-03T21:08:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/news/healthcare-wayfinding-the-brand-promise</loc>
+  <lastmod>2025-01-03T21:08:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/news/placemaking-design-public-spaces-for-the-community</loc>
+  <lastmod>2025-01-03T21:08:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/san-ysidro-port-of-entry-san-diego-ca</loc>
+  <lastmod>2025-01-03T21:08:25+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/tustin-legacy-tustin-ca</loc>
+  <lastmod>2025-01-03T21:08:26+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/pacmutual-building</loc>
+  <lastmod>2025-01-03T21:08:25+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/dana-point-harbor</loc>
+  <lastmod>2025-01-03T21:08:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/news/certainty-variety-delight</loc>
+  <lastmod>2025-01-03T21:08:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/news/connecting-people-to-place</loc>
+  <lastmod>2025-01-03T21:08:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/news/enhancing-the-fan-experience-through-environmental-graphic-design</loc>
+  <lastmod>2025-01-03T21:08:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/news/ovation-hollywood-academy-awards</loc>
+  <lastmod>2025-01-03T21:08:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/news/planes-trains-automobilesand-ferries-bikes-and-buses-shopping-and-great-food</loc>
+  <lastmod>2025-01-03T21:08:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/news/shaping-a-coastal-identity-pacific-city-and-rsm-design</loc>
+  <lastmod>2025-01-03T21:08:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/grove-central-coconut-grove-florida</loc>
+  <lastmod>2025-01-03T21:08:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/port-of-san-diego</loc>
+  <lastmod>2025-01-03T21:08:25+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/news/current-trends-in-architectural-graphics</loc>
+  <lastmod>2025-01-03T21:08:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/news/design-trends-for-places-we-love</loc>
+  <lastmod>2025-01-03T21:08:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/news/its-time-to-redefine-architectural-graphic-design</loc>
+  <lastmod>2025-01-03T21:08:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/news/on-the-origins-of-architectural-graphics</loc>
+  <lastmod>2025-01-03T21:08:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/news/retail-renaissance-updates-from-latin-america</loc>
+  <lastmod>2025-01-03T21:08:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/grand-central-terminal-signage-and-wayfinding</loc>
+  <lastmod>2025-01-03T21:08:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/the-star-home-of-the-dallas-cowboys</loc>
+  <lastmod>2025-01-03T21:08:26+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/miami-design-district</loc>
+  <lastmod>2025-01-03T21:08:25+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/news/branding-wayfinding-and-creating-a-strong-community</loc>
+  <lastmod>2025-01-03T21:08:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/hospitality-information</loc>
+  <lastmod>2025-01-03T21:08:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/harbor-day-school-branding</loc>
+  <lastmod>2025-01-03T21:08:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/dana-point-harbor-branding</loc>
+  <lastmod>2025-01-03T21:08:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/news/finding-your-voice-in-the-crowd</loc>
+  <lastmod>2025-01-03T21:08:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/news/Innovative-Ways-to-Create-Public-Spaces-in-Las-Vegas</loc>
+  <lastmod>2025-01-03T21:08:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/first-and-broadway-park</loc>
+  <lastmod>2025-01-03T21:08:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/hollywood-park</loc>
+  <lastmod>2025-01-03T21:08:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/cultural-districts/</loc>
+  <lastmod>2025-01-03T21:08:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/great-park-sharestream-public-art</loc>
+  <lastmod>2025-01-03T21:08:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/bearded-tang-brewery</loc>
+  <lastmod>2025-01-03T21:08:23+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/markets/streetscape-design</loc>
+  <lastmod>2025-01-03T21:08:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/creating-social-media-places/</loc>
+  <lastmod>2025-01-03T21:08:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/what-is-environmental-graphic-design-part-2-egd-is-about-emotional-connections/</loc>
+  <lastmod>2025-01-03T21:08:23+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/regions/nashville-tennessee</loc>
+  <lastmod>2025-01-03T21:08:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/services/experiential-graphic-design</loc>
+  <lastmod>2025-01-03T21:08:23+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/montclair-place</loc>
+  <lastmod>2025-01-03T21:08:25+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/del-amo-fashion-center</loc>
+  <lastmod>2025-01-03T21:08:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/american-dream</loc>
+  <lastmod>2025-01-03T21:08:23+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/mesa-court-towers-irvine-ca</loc>
+  <lastmod>2025-01-03T21:08:25+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/starfield-hanam-hanam-south-korea</loc>
+  <lastmod>2025-01-03T21:08:25+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/forum-cuernavaca-cuernavaca-mexico</loc>
+  <lastmod>2025-01-03T21:08:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/terramor</loc>
+  <lastmod>2025-01-03T21:08:26+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/pavilion-park-irvine-ca</loc>
+  <lastmod>2025-01-03T21:08:25+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/the-outlet-collection-at-riverwalk-new-orleans-la</loc>
+  <lastmod>2025-01-03T21:08:26+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/lincoln-plaza</loc>
+  <lastmod>2025-01-03T21:08:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/mercado-del-barrio</loc>
+  <lastmod>2025-01-03T21:08:25+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/loop-5</loc>
+  <lastmod>2025-01-03T21:08:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/lalaport-toyosu</loc>
+  <lastmod>2025-01-03T21:08:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/otay-ranch</loc>
+  <lastmod>2025-01-03T21:08:25+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/the-promenade-bolingbrook</loc>
+  <lastmod>2025-01-03T21:08:26+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/waikiki-beach-walk</loc>
+  <lastmod>2025-01-03T21:08:26+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/8-avenida</loc>
+  <lastmod>2025-01-03T21:08:23+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/estacao-viana</loc>
+  <lastmod>2025-01-03T21:08:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/cosmo-i-serve</loc>
+  <lastmod>2025-01-03T21:08:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/wayfinding-design/</loc>
+  <lastmod>2025-01-03T21:08:23+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/news/what-is-wayfinding-part-4-whats-next-in-wayfinding</loc>
+  <lastmod>2025-01-03T21:08:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/blog/what-is-wayfinding-4-part-series/</loc>
+  <lastmod>2025-01-03T21:08:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/omni-pga-frisco-resort</loc>
+  <lastmod>2025-01-03T21:08:25+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/trick-rider</loc>
+  <lastmod>2025-01-03T21:08:26+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/frisco-station-frisco-texas</loc>
+  <lastmod>2025-01-03T21:08:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/fifth-broadway-nashville-tennessee/</loc>
+  <lastmod>2025-01-03T21:08:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/san-ysidro-port-of-entry-san-diego-ca?r=1</loc>
+  <lastmod>2025-01-03T21:08:25+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/the-research-and-development-district-radd</loc>
+  <lastmod>2025-01-03T21:08:26+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/architecture-and-design-exchange-dallas-tx/</loc>
+  <lastmod>2025-01-03T21:08:23+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/services/wayfinding-design/</loc>
+  <lastmod>2025-01-03T21:08:25+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/services/placemaking-public-art/</loc>
+  <lastmod>2025-01-03T21:08:25+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/services/environmental-graphic-design/</loc>
+  <lastmod>2025-01-03T21:08:25+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/regions/washington-dc</loc>
+  <lastmod>2025-01-03T21:08:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/thebend</loc>
+  <lastmod>2025-01-03T21:08:26+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/cucamonga-station-brand-logo-design</loc>
+  <lastmod>2025-01-03T21:08:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/laguna-niguel-city-center-brand</loc>
+  <lastmod>2025-01-03T21:08:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/the-shops-at-riverside</loc>
+  <lastmod>2025-01-03T21:08:26+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/manhattan-village</loc>
+  <lastmod>2025-01-03T21:08:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/novel-park</loc>
+  <lastmod>2025-01-03T21:08:25+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/cadence-park-irvine-ca</loc>
+  <lastmod>2025-01-03T21:08:23+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/parasol-park-irvine-ca</loc>
+  <lastmod>2025-01-03T21:08:25+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/beacon-park-irvine-ca</loc>
+  <lastmod>2025-01-03T21:08:23+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/regions/hawaii</loc>
+  <lastmod>2025-01-03T21:08:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/services/experiential-design/</loc>
+  <lastmod>2025-01-03T21:08:25+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/services/branding-logo-design/</loc>
+  <lastmod>2025-01-03T21:08:25+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/using-public-art-to-add-value-to-projects/</loc>
+  <lastmod>2025-01-03T21:08:23+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/disneys-hotel-miracosta-branding</loc>
+  <lastmod>2025-01-03T21:08:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/Trailborn-Rocky-Mountains</loc>
+  <lastmod>2025-01-03T21:08:23+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/the-wave-hotel</loc>
+  <lastmod>2025-01-03T21:08:26+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/Tenaya-at-Yosemite</loc>
+  <lastmod>2025-01-03T21:08:23+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/virgin-hotel</loc>
+  <lastmod>2025-01-03T21:08:26+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/markets/team/harry-mark-faia</loc>
+  <lastmod>2025-01-03T21:08:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/markets/services/branding-logo-design</loc>
+  <lastmod>2025-01-03T21:08:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/markets/services/master-sign-programs</loc>
+  <lastmod>2025-01-03T21:08:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/search?query=healthcare</loc>
+  <lastmod>2025-01-03T21:08:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/pacific-city-case-study</loc>
+  <lastmod>2025-01-03T21:08:25+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/hotel-del-coronado</loc>
+  <lastmod>2025-01-03T21:08:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/pacific-city-specialty-graphics</loc>
+  <lastmod>2025-01-03T21:08:25+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/seaport-village</loc>
+  <lastmod>2025-01-03T21:08:25+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/bel-air-village</loc>
+  <lastmod>2025-01-03T21:08:23+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/hospitality-information?s=1</loc>
+  <lastmod>2025-01-03T21:08:24+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/pavilion-park-irvine-ca/</loc>
+  <lastmod>2025-01-03T21:08:25+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/summit-bechtel-reserve-2/</loc>
+  <lastmod>2025-01-03T21:08:25+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/university-of-california-riverside/</loc>
+  <lastmod>2025-01-03T21:08:26+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/pacific-city-case-study/</loc>
+  <lastmod>2025-01-03T21:08:25+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/playa-vista-parks-los-angeles-ca</loc>
+  <lastmod>2025-01-03T21:08:25+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/project-types/higher-education-design/</loc>
+  <lastmod>2025-01-03T21:08:25+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/santa-ana-college-santa-ana-ca/</loc>
+  <lastmod>2025-01-03T21:08:25+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/college-of-the-desert-palm-desert-california/</loc>
+  <lastmod>2025-01-03T21:08:24+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/mesa-court-towers-irvine-ca/</loc>
+  <lastmod>2025-01-03T21:08:25+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/university-of-the-pacific/</loc>
+  <lastmod>2025-01-03T21:08:26+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/services/master-signage-programs/</loc>
+  <lastmod>2025-01-03T21:08:25+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/oxigeno-human-playground-san-jose-costa-rica/</loc>
+  <lastmod>2025-01-03T21:08:25+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/aerocity-new-delihi-india/</loc>
+  <lastmod>2025-01-03T21:08:23+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/oc-vibe</loc>
+  <lastmod>2025-01-03T21:08:25+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/omni-hotel-frisco-texas</loc>
+  <lastmod>2025-01-03T21:08:25+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/regions/florida</loc>
+  <lastmod>2025-01-03T21:08:22+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/moscow-riviera-moscow-russia</loc>
+  <lastmod>2025-01-03T21:08:25+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/hofgarten</loc>
+  <lastmod>2025-01-03T21:08:24+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/specialty-graphics-at-long-beach-exchange</loc>
+  <lastmod>2025-01-03T21:08:25+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/news/national-landing-wayfinding-strategies-analysis</loc>
+  <lastmod>2025-01-03T21:08:21+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/project-types/city-signage-design/</loc>
+  <lastmod>2025-01-03T21:08:25+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/grand-central-terminal-dining-concourse</loc>
+  <lastmod>2025-01-03T21:08:24+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/biovista-san-diego?s=1</loc>
+  <lastmod>2025-01-03T21:08:23+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/oxigeno-human-playground</loc>
+  <lastmod>2025-01-03T21:08:25+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/aerocity</loc>
+  <lastmod>2025-01-03T21:08:23+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/work/the-hangar-at-lbx</loc>
+  <lastmod>2025-01-03T21:08:26+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://rsmdesign.com/regions/new-york-city</loc>
+  <lastmod>2025-01-03T21:08:22+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+
+
+</urlset>

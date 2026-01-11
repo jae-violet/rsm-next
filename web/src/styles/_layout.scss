@@ -1,0 +1,538 @@
+$BREAKPOINT-XS: 31.25em;
+$BREAKPOINT-SM: 62.5em;
+$BREAKPOINT-MD: 93.75em;
+$BREAKPOINT-LG: 125em;
+
+@mixin spacing {
+	--GRID-CELL: calc(100vw / 39);
+
+	@media (max-width: $BREAKPOINT-SM) {
+		--GRID-CELL: calc(1rem + 1.5vw);
+	}
+
+	@media (min-width: $BREAKPOINT-LG) {
+		--GRID-CELL: 3.205rem;
+	}
+
+	--SPACE-SM: calc(var(--GRID-CELL) / 2);
+	--SPACE-MD: var(--GRID-CELL);
+	--SPACE-LG: calc(var(--GRID-CELL) * 2);
+	--SPACE-XL: calc(var(--GRID-CELL) * 3);
+	--SPACE-XXL: calc(var(--GRID-CELL) * 5);
+	--SPACE-XXXL: calc(var(--GRID-CELL) * 8);
+}
+
+@mixin grids {
+	--GRID-WRAPPER: [viewport-start] 
+					 4fr
+					[header-start main-start container-start footer-start sixth-start eighth-start]
+					 7fr
+					[eighth-end]
+					 2fr
+					[eighth-start]
+					 1fr
+					[sixth-end]
+					 2fr
+					[sixth-start]
+					 4fr
+					[eighth-end]
+					 2fr
+					[eighth-start]
+					 4fr
+					[sixth-end]
+					 2fr
+					[sixth-start]
+					 1fr
+					[eighth-end]
+					 2fr
+					[eighth-start]
+					 7fr
+					[eighth-end sixth-end]
+					 2fr
+					[sixth-start eighth-start]
+					 7fr
+					[eighth-end]
+					 2fr
+					[eighth-start]
+					 1fr
+					[sixth-end]
+					 2fr
+					[sixth-start]
+					 4fr
+					[eighth-end]
+					 2fr
+					[eighth-start]
+					 4fr
+					[sixth-end]
+					 2fr
+					[sixth-start]
+					 1fr
+					[eighth-end]
+					 2fr
+					[eighth-start]
+					 7fr
+					[eighth-end sixth-end footer-end container-end main-end header-end]
+					 4fr
+					[viewport-end];
+
+	@media (min-width: $BREAKPOINT-LG) {
+		--GRID-WRAPPER: [viewport-start] 
+						 1fr
+						[header-start main-start container-start footer-start sixth-start eighth-start]
+						 calc(7 * var(--GRID-CELL) / 2)
+						[eighth-end]
+						 calc(2 * var(--GRID-CELL) / 2)
+						[eighth-start]
+						 calc(1 * var(--GRID-CELL) / 2)
+						[sixth-end]
+						 calc(2 * var(--GRID-CELL) / 2)
+						[sixth-start]
+						 calc(4 * var(--GRID-CELL) / 2)
+						[eighth-end]
+						 calc(2 * var(--GRID-CELL) / 2)
+						[eighth-start]
+						 calc(4 * var(--GRID-CELL) / 2)
+						[sixth-end]
+						 calc(2 * var(--GRID-CELL) / 2)
+						[sixth-start]
+						 calc(1 * var(--GRID-CELL) / 2)
+						[eighth-end]
+						 calc(2 * var(--GRID-CELL) / 2)
+						[eighth-start]
+						 calc(7 * var(--GRID-CELL) / 2)
+						[eighth-end sixth-end]
+						 calc(2 * var(--GRID-CELL) / 2)
+						[sixth-start eighth-start]
+						 calc(7 * var(--GRID-CELL) / 2)
+						[eighth-end]
+						 calc(2 * var(--GRID-CELL) / 2)
+						[eighth-start]
+						 calc(1 * var(--GRID-CELL) / 2)
+						[sixth-end]
+						 calc(2 * var(--GRID-CELL) / 2)
+						[sixth-start]
+						 calc(4 * var(--GRID-CELL) / 2)
+						[eighth-end]
+						 calc(2 * var(--GRID-CELL) / 2)
+						[eighth-start]
+						 calc(4 * var(--GRID-CELL) / 2)
+						[sixth-end]
+						 calc(2 * var(--GRID-CELL) / 2)
+						[sixth-start]
+						 calc(1 * var(--GRID-CELL) / 2)
+						[eighth-end]
+						 calc(2 * var(--GRID-CELL) / 2)
+						[eighth-start]
+						 calc(7 * var(--GRID-CELL) / 2)
+						[eighth-end sixth-end footer-end container-end main-end header-end]
+						 1fr
+						[viewport-end];
+	}
+
+	--GRID-CONTAINER: [whole-start half-start third-start quarter-start
+					   sixth-start eighth-start ninth-start twelfth-start]
+					   6fr
+					  [twelfth-end
+					   twelfth-start]
+					   2fr
+					  [ninth-end
+					   ninth-start]
+					   1fr
+					  [eighth-end
+					   eighth-start]
+					   3fr
+					  [twelfth-end sixth-end
+					   sixth-start twelfth-start]
+					   4fr
+					  [ninth-end
+					   ninth-start]
+					   2fr
+					  [twelfth-end eighth-end quarter-end
+					   quarter-start eighth-start twelfth-start]
+					   6fr
+					  [twelfth-end ninth-end sixth-end third-end
+					   third-start sixth-start ninth-start twelfth-start]
+					   3fr
+					  [eighth-end
+					   eighth-start]
+					   3fr
+					  [twelfth-end
+					   twelfth-start]
+					   2fr
+					  [ninth-end
+					   ninth-start]
+					   4fr
+					  [twelfth-end eighth-end sixth-end quarter-end half-end
+					   half-start quarter-start sixth-start eighth-start twelfth-start]
+					   4fr
+					  [ninth-end
+					   ninth-start]
+					   2fr
+					  [twelfth-end
+					   twelfth-start]
+					   3fr
+					  [eighth-end
+					   eighth-start]
+					   3fr
+					  [twelfth-end ninth-end sixth-end third-end
+					   third-start sixth-start ninth-start twelfth-start]
+					   6fr
+					  [twelfth-end eighth-end quarter-end
+					   quarter-start eighth-start twelfth-start]
+					   2fr
+					  [ninth-end
+					   ninth-start]
+					   4fr
+					  [twelfth-end sixth-end
+					   sixth-start twelfth-start]
+					   3fr
+					  [eighth-end
+					   eighth-start]
+					   1fr
+					  [ninth-end
+					   ninth-start]
+					   2fr
+					  [twelfth-end
+					   twelfth-start]
+					   6fr
+					  [twelfth-end ninth-end eighth-end sixth-end
+					   quarter-end third-end half-end whole-end];
+
+	--GRID-CONTAINER-PROJECTS: [whole-start half-start third-start quarter-start
+					   sixth-start eighth-start ninth-start twelfth-start]
+					   6fr
+					  [twelfth-end
+					   twelfth-start]
+					   2fr
+					  [ninth-end
+					   ninth-start]
+					   1fr
+					  [eighth-end
+					   eighth-start]
+					   3fr
+					  [twelfth-end sixth-end
+					   sixth-start twelfth-start]
+					   4fr
+					  [ninth-end
+					   ninth-start]
+					   2fr
+					  [twelfth-end eighth-end quarter-end
+					   quarter-start eighth-start twelfth-start]
+					   6fr
+					  [twelfth-end ninth-end sixth-end third-end
+					   third-start sixth-start ninth-start twelfth-start]
+					   3fr
+					  [eighth-end
+					   eighth-start]
+					   3fr
+					  [twelfth-end
+					   twelfth-start]
+					   2fr
+					  [ninth-end
+					   ninth-start]
+					   4fr
+					  [twelfth-end eighth-end sixth-end quarter-end half-end
+					   half-start quarter-start sixth-start eighth-start twelfth-start]
+					   4fr
+					  [ninth-end
+					   ninth-start]
+					   2fr
+					  [twelfth-end
+					   twelfth-start]
+					   3fr
+					  [eighth-end
+					   eighth-start]
+					   3fr
+					  [twelfth-end ninth-end sixth-end third-end
+					   third-start sixth-start ninth-start twelfth-start]
+					   6fr
+					  [twelfth-end eighth-end quarter-end
+					   quarter-start eighth-start twelfth-start]
+					   2fr
+					  [ninth-end
+					   ninth-start]
+					   4fr
+					  [twelfth-end sixth-end
+					   sixth-start twelfth-start]
+					   3fr
+					  [eighth-end
+					   eighth-start]
+					   1fr
+					  [ninth-end
+					   ninth-start]
+					   2fr
+					  [twelfth-end
+					   twelfth-start]
+					   6fr
+					  [twelfth-end ninth-end eighth-end sixth-end
+					   quarter-end third-end half-end whole-end];
+
+	@media (max-width: $BREAKPOINT-SM) {
+		--GRID-WRAPPER: [viewport-start]
+						 2%
+						[header-start main-start container-start footer-start half-start third-start]
+						 3fr
+						[third-end]
+						 1fr
+						[third-start]
+						 1fr
+						[half-end]
+						 1fr
+						[half-start]
+						 1fr
+						[third-end]
+						 1fr
+						[third-start]
+						 3fr
+						[third-end half-end footer-end container-end main-end header-end]
+						 2%
+						[viewport-end];
+
+		--GRID-CONTAINER: [whole-start half-start third-start quarter-start
+						   sixth-start eighth-start ninth-start twelfth-start]
+						   36fr
+						  [twelfth-end ninth-end eighth-end sixth-end
+						   quarter-end third-end half-end
+						   half-start third-start quarter-start
+						   sixth-start eighth-start ninth-start twelfth-start]
+						   36fr
+						  [twelfth-end ninth-end eighth-end sixth-end
+						   quarter-end third-end half-end whole-end];
+	}
+
+	@media (max-width: $BREAKPOINT-XS) {
+		--GRID-WRAPPER: [viewport-start]
+						 2%
+						[header-start main-start container-start footer-start half-start third-start]
+						 1fr
+						[third-end half-end footer-end container-end main-end header-end]
+						 2%
+						[viewport-end];
+		--GRID-CONTAINER: [whole-start half-start third-start quarter-start
+						   sixth-start eighth-start ninth-start twelfth-start]
+						   72fr
+						  [twelfth-end ninth-end eighth-end sixth-end
+						   quarter-end third-end half-end whole-end];
+
+		--GRID-CONTAINER-PROJECTS: [whole-start half-start third-start quarter-start
+									sixth-start eighth-start ninth-start twelfth-start]
+									72fr
+								   [twelfth-end ninth-end eighth-end sixth-end
+									quarter-end third-end half-end whole-end];
+	}
+}
+
+@mixin body {
+	margin: 0;
+	padding: 0;
+	min-height: 100vh;
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+:global {
+	header,
+	footer {
+		flex: 0 0 auto;
+		align-self: flex-start;
+
+		width: 100%;
+		
+		margin: 0;
+		padding: 0;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	main,
+	.wrapper {
+		display: grid;
+		grid-template-columns: var(--GRID-WRAPPER);
+		align-items: start;
+		justify-items: start;
+		justify-content: stretch;
+
+		width: 100%;
+		//max-width: 125rem;
+
+		margin: 0;
+		padding: 0;
+
+		.container {
+			grid-column: container;
+			width: 100%;
+			max-width: 125rem;
+			justify-self: center;
+
+			display: grid;
+			grid-template-columns: var(--GRID-CONTAINER);
+
+			//grid-auto-rows: max-content 1fr auto;
+
+			@media (max-width: $BREAKPOINT-SM) {
+				column-gap: var(--GRID-CELL);
+			}
+			@media (max-width: $BREAKPOINT-XS) {
+				column-gap: 0;
+			}
+
+			&:first-child {
+				margin-top: var(--HEADER-HEIGHT);
+			}
+		}
+
+		&.flex {
+			flex: 1 0 100%;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			margin: 0;
+			padding: 0 5vw;
+
+			&.column {
+				flex-direction: column;
+				flex-wrap: nowrap;
+				justify-content: flex-start;
+				align-items: stretch;
+			}
+
+			&.padding-none {
+				padding: 0;
+			}
+
+			.container {
+				flex-basis: 100%;
+				width: 100%;
+				max-width: calc(125em - 10vw);
+				height: 100%;
+
+				margin: 0;
+				padding: 0;
+			}
+		}
+	}
+
+	.contents {
+		display: contents;
+	}
+
+	.grid {
+		display: grid;
+	}
+
+	.flex {
+		display: flex !important;
+
+		&.column {
+			flex-direction: column;
+		}
+
+		&.wrap {
+			flex-wrap: wrap;
+		}
+
+		&.space-between {
+			justify-content: space-between;
+		}
+	}
+
+	&.flex-align-end {
+		align-items: flex-end !important;
+	}
+	&.flex-justify-start {
+		justify-content: flex-start !important;
+	}
+	&.flex-justify-end {
+		justify-content: flex-end !important;
+	}
+
+	@for $i from 2 through 6 {
+		.grid-col-#{$i} {
+			display: grid;
+			grid-template-columns: repeat(#{$i}, 1fr);
+			column-gap: var(--SPACE-MD);
+			row-gap: var(--SPACE-MD);
+
+			@media (max-width: 46.875em) {
+				grid-template-columns: repeat(2, 1fr);
+			}
+
+			@media (max-width: $BREAKPOINT-XS) {
+				grid-template-columns: 1fr;
+			}
+		}
+	}
+
+	.col-gap-none {
+		column-gap: 0;
+	}
+	.col-gap-sm {
+		column-gap: var(--SPACE-SM);
+	}
+	.col-gap-md {
+		column-gap: var(--SPACE-MD);
+	}
+	.col-gap-lg {
+		column-gap: var(--SPACE-LG);
+	}
+	.col-gap-xl {
+		column-gap: var(--SPACE-XL);
+	}
+}
+
+@mixin layout-blocks {
+	/*
+	 * LAYOUT BLOCK SPACING
+	 */
+
+	section + section {
+		margin-top: calc(var(--GRID-CELL) / 2);
+	}
+	section.header {
+		&:not(:first-child) {
+			margin-top: calc(var(--GRID-CELL) * 6);
+		}
+		+ section.richText {
+			margin-top: calc(var(--GRID-CELL) / 2);
+		}
+		+ section.projectsGrid {
+			margin-top: calc(var(--GRID-CELL) * 2);
+		}
+		+ section.featuredPage {
+			margin-top: calc(var(--GRID-CELL) * 6);
+		}
+	}
+
+	section.richText, section.list, section.cta {
+		+ section.projectsGrid {
+			margin-top: calc(var(--GRID-CELL) * 4);
+		}
+	}
+
+	section.projectsGrid {
+		+ section {
+			margin-top: calc(var(--GRID-CELL) * 3);
+		}
+		+ section.header {
+			margin-top: calc(var(--GRID-CELL) * 2);
+		}
+		+ section.featuredPage {
+			margin-top: calc(var(--GRID-CELL) * 2);
+		}
+	}
+
+	section.featuredPage {
+		+ section {
+			margin-top: calc(var(--GRID-CELL) * 2);
+		}
+		+ section.header:not(:first-child) {
+			margin-top: calc(var(--GRID-CELL) * 3);
+		}
+	}
+}

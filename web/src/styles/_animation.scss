@@ -1,0 +1,157 @@
+@mixin animations {
+	--fade-mid: 1;
+}
+
+$keyframe-midpoint: 61.8%;
+
+:global {
+	.fade {
+		opacity: var(--fade-from, 0);
+		animation: fade var(--fade-duration, 1s) var(--fade-timing, ease) forwards;
+	}
+
+	@keyframes fade {
+		0% {
+			opacity: var(--fade-from, 0);
+		}
+		#{$keyframe-midpoint} {
+			opacity: var(--fade-mid);
+		}
+		100% {
+			opacity: var(--fade-to, 1);
+		}
+	}
+
+	.move {
+		transform: translate(var(--moveX-from, 0rem), var(--moveY-from, 1rem));
+		animation: move var(--move-duration, 1s) var(--move-timing, ease) forwards;
+	}
+
+	@keyframes move {
+		0% {
+			transform: translate(var(--moveX-from, 0rem), var(--moveY-from, 1rem));
+		}
+		#{$keyframe-midpoint} {
+			transform: translate(var(--moveX-mid), var(--moveY-mid));
+		}
+		100% {
+			transform: translate(var(--moveX-to, 0rem), var(--moveY-to, 0rem));
+		}
+	}
+
+	.fadeMove {
+		opacity: var(--fade-from, 0);
+		transform: translate(var(--moveX-from, 0rem), var(--moveY-from, 3rem));
+		animation: fade var(--fade-duration, 1s) var(--fade-timing, ease) forwards,
+				   move var(--move-duration, 1s) var(--move-timing, ease) forwards;
+	}
+
+	@keyframes slideLeft {
+		0% {
+			opacity: 0;
+			transform: translate(185px, 0);
+		}
+		60% {
+			opacity: 1;
+		}
+		100% {
+			opacity: 1;
+			transform: translate(0, 0);
+		}
+	}
+
+	.fadeMoveLeft {
+		opacity: var(--fade-from, 0);
+		transform: translate(var(--moveX-from, 0rem), var(--moveY-from, 0));
+		animation: fade var(--fade-duration, 1s) var(--fade-timing, ease) forwards,
+				   		 slideLeft var(--move-duration, 1s) var(--move-timing, ease) forwards;
+	}
+
+	@keyframes mainHeading {
+		0% {
+			opacity: 0;
+			line-height: 1.5;
+		}
+		100% {
+			opacity: 1;
+			line-height: 1;
+		}
+	}
+
+	@keyframes secondaryHeading {
+		0% {
+			opacity: 0;
+			line-height: 1.5;
+		}
+		100% {
+			opacity: 1;
+			line-height: 1.1;
+		}
+	}
+
+	@keyframes mainParagraph {
+		0% {
+			opacity: 0;
+			line-height: 1.7;
+		}
+		100% {
+			opacity: 1;
+			line-height: 1.3;
+		}
+	}
+
+	.slideLeft {
+		opacity: 0;
+		animation: slideLeft 1.1s cubic-bezier(0, 0.55, 0.45, 1) forwards;
+	}
+
+	.mainHeading {
+		height: var(--maxHeight);
+		overflow: hidden;
+		opacity: 0;
+		line-height: 2;
+		animation: mainHeading 1.1s cubic-bezier(0.61, 1, 0.88, 1) 500ms forwards;
+	}
+
+	.secondaryHeading {
+		overflow: hidden;
+		opacity: 0;
+		line-height: 2;
+		animation: secondaryHeading 1.1s cubic-bezier(0.61, 1, 0.88, 1) 500ms forwards;
+	}
+
+	.mainParagraph {
+		opacity: 0;
+		line-height: 2;
+		animation: mainParagraph 1.1s cubic-bezier(0.61, 1, 0.88, 1) 500ms forwards;
+	}
+
+	@media screen and (max-width: 1024px) {
+		.mainHeading {
+			height: auto;
+			overflow: unset;
+			opacity: 1;
+			line-height: 1;
+			animation: none;
+		}
+
+		.secondaryHeading {
+			overflow: unset;
+			opacity: 1;
+			line-height: 1.1;
+			animation: none;
+		}
+
+		.mainParagraph {
+			opacity: 1;
+			line-height: 1.33;
+			animation: none;
+		}
+
+		.slideLeft {
+			opacity: 1;
+			transform: translate(0, 0);
+			animation: none;
+		}
+	}
+}

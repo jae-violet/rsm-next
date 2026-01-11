@@ -1,0 +1,342 @@
+$BREAKPOINT-XS: 31.25em;
+$BREAKPOINT-SM: 62.5em;
+$BREAKPOINT-MD: 93.75em;
+$BREAKPOINT-LG: 125em;
+
+@mixin font-sizes {
+	// font scale em: 0.583em 0.667em 0.777em 0.888em 1em 1.167em 1.333em 1.777em 2.333em 3em 3.777em 4.667em 5.667em
+	// font scale px: 9.333px 10.667px 12.444px 14.222px 16px 18.667px 21.333px 28.444px 37.333px 48px 60.444px 74.667px 90.667px
+
+	--FONT-SIZE-XXS: calc(10.667px + (12.444 - 10.667) * ((100vw - 1000px) / (2000 - 1000))); // 11.25
+	--FONT-SIZE-XS: calc(12.444px + (16 - 12.444) * ((100vw - 1000px) / (2000 - 1000))); // 13.75
+	--FONT-SIZE-SM: calc(14.222px + (18.667 - 14.222) * ((100vw - 1000px) / (2000 - 1000))); // 16
+	--FONT-SIZE-MD: calc(18.667px + (21.333 - 18.667) * ((100vw - 1000px) / (2000 - 1000))); // 20
+	--FONT-SIZE-LG: calc(21.333px + (28.444 - 21.333) * ((100vw - 1000px) / (2000 - 1000))); // 22.5
+
+	--FONT-SIZE-XL: calc(28.444px + (37.333 - 28.444) * ((100vw - 1000px) / (1500 - 1000))); // 40
+	--FONT-SIZE-XXL: calc(37.333px + (48 - 37.333) * ((100vw - 1000px) / (1500 - 1000))); // 55
+	--FONT-SIZE-XXXL: calc(48px + (74.667 - 48) * ((100vw - 1000px) / (1500 - 1000))); // 80
+
+	@media (min-width: $BREAKPOINT-MD) {
+		--FONT-SIZE-XL: calc(37.333px + (48 - 37.333) * ((100vw - 1500px) / (2000 - 1500))); // 40
+		--FONT-SIZE-XXL: calc(48px + (60.444 - 48) * ((100vw - 1500px) / (2000 - 1500))); // 55
+		--FONT-SIZE-XXXL: calc(74.667px + (90.667 - 74.667) * ((100vw - 1500px) / (2000 - 1500))); // 80
+	}
+
+	@media (min-width: $BREAKPOINT-LG) {
+		--FONT-SIZE-XXS: 12.444px;
+		--FONT-SIZE-XS: 16px;
+		--FONT-SIZE-SM: 18.667px;
+		--FONT-SIZE-MD: 21.333px;
+		--FONT-SIZE-LG: 28.444px;
+		--FONT-SIZE-XL: 48px;
+		--FONT-SIZE-XXL: 60.444px;
+		--FONT-SIZE-XXXL: 90.667px;
+	}
+
+	@media (max-width: $BREAKPOINT-SM) {
+		--FONT-SIZE-XXS: calc(9.333px + (10.667 - 9.333) * ((100vw - 500px) / (1000 - 500))); // 11.25
+		--FONT-SIZE-XS: calc(10.667px + (12.444 - 10.667) * ((100vw - 500px) / (1000 - 500))); // 13.75
+		--FONT-SIZE-SM: calc(12.444px + (14.222 - 12.444) * ((100vw - 500px) / (1000 - 500))); // 16
+		--FONT-SIZE-MD: calc(14.222px + (18.667 - 14.222) * ((100vw - 500px) / (1000 - 500))); // 20
+		--FONT-SIZE-LG: calc(16px + (21.333 - 16) * ((100vw - 500px) / (1000 - 500))); // 22.5
+		--FONT-SIZE-XL: calc(18.667px + (28.444 - 18.667) * ((100vw - 500px) / (1000 - 500))); // 40
+		--FONT-SIZE-XXL: calc(21.333px + (37.333 - 21.333) * ((100vw - 500px) / (1000 - 500))); // 55
+		--FONT-SIZE-XXXL: calc(37.333px + (48 - 37.333) * ((100vw - 500px) / (1000 - 500))); // 80
+	}
+
+	@media (max-width: $BREAKPOINT-XS) {
+		--FONT-SIZE-XXS: 9.333px;
+		--FONT-SIZE-XS: 10.667px;
+		--FONT-SIZE-SM: 12.444px;
+		--FONT-SIZE-MD: 14.222px;
+		--FONT-SIZE-LG: 16px;
+		--FONT-SIZE-XL: 18.667px;
+		--FONT-SIZE-XXL: 21.333px;
+		--FONT-SIZE-XXXL: 37.333px;
+	}
+}
+
+@mixin fonts {
+	--FONT-FAMILY-PROXIMA-NOVA: 'Proxima Nova', var(--font-stack-sans);
+	--font-stack-sans: Avenir, 'Avenir Next', Verdana, -apple-system, BlinkMacSystemFont, Tahoma, 'Helvetica Neue', Helvetica, Roboto, Noto, Arial, sans-serif;
+}
+
+@mixin body {
+	font-family: var(--FONT-FAMILY-PROXIMA-NOVA);
+	font-size: var(--FONT-SIZE-MD);
+	font-weight: 300;
+	line-height: 1.333;
+	letter-spacing: 0;
+
+	color: var(--text-color, var(--COLOR-BLACK));
+}
+
+:global {
+	p {
+		margin: 0 0 1em 0;
+
+		&.font-weight-400 {
+			font-weight: 400 !important;
+		} 
+	}
+
+	a {
+		text-decoration: none;
+		color: inherit;
+
+		transition: color 0.2s ease;
+
+		&:hover,
+		&:focus {
+			color: var(--COLOR-ORANGE);
+		}
+
+		&.active {
+			color: var(--COLOR-MID-GRAY);
+		}
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		&:not(article.rich-text) { 
+		// This is needed to overrule the specificity of what's below
+			margin: 0;
+			font-weight: 700;
+
+			&.xxs, &.xs, &.sm, &.md, &.lg, &.xl, &.xxl, &.xxxl {
+				font-weight: 700;
+			}
+
+			&.xxs, &.xs, &.sm, &.md {
+				@extend .caps;
+				line-height: 1.333;
+				margin-bottom: 0.5em;
+
+				&.lowercase {
+					@extend .lowercase;
+				}
+			}
+		}
+	}
+
+	:not(article.rich-text).xxs {
+		font-size: var(--FONT-SIZE-XXS);
+		font-weight: 400;
+		line-height: 1.333;
+		--moveY-from: 0.571rem;
+	}
+
+	:not(article.rich-text).xs {
+		font-size: var(--FONT-SIZE-XS);
+		font-weight: 400;
+		line-height: 1.333;
+		--moveY-from: 0.667rem;
+	}
+
+	:not(article.rich-text).sm {
+		font-size: var(--FONT-SIZE-SM);
+		font-weight: 400;
+		line-height: 1.333;
+		--moveY-from: 0.75rem;
+	}
+
+	:not(article.rich-text).md {
+		font-size: var(--FONT-SIZE-MD);
+		font-weight: 400;
+		line-height: 1.333;
+		--moveY-from: 1rem;
+	}
+
+	:not(article.rich-text).lg {
+		font-size: var(--FONT-SIZE-LG);
+		font-weight: 700;
+		line-height: 1.167;
+		--moveY-from: 1.143rem;
+	}
+
+	:not(article.rich-text).xl {
+		font-size: var(--FONT-SIZE-XL);
+		font-weight: 700;
+		line-height: 1;
+		--moveY-from: 1.5rem;
+	}
+
+	:not(article.rich-text).xxl {
+		font-size: var(--FONT-SIZE-XXL);
+		font-weight: 700;
+		line-height: 1;
+		--moveY-from: 2rem;
+	}
+
+	:not(article.rich-text).xxxl {
+		font-size: var(--FONT-SIZE-XXXL);
+		font-weight: 700;
+		line-height: 1;
+		--moveY-from: 2.5rem;
+	}
+
+	.caps {
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+	}
+
+	.lowercase {
+		text-transform: unset;
+		letter-spacing: unset;
+	}
+
+	.text-align-left {
+		text-align: left;
+	}
+	.text-align-center {
+		text-align: center;
+	}
+	.text-align-right {
+		text-align: right;
+	}
+
+	// specify <article> or <section> because v3 RichText is a <div>, so can use different styles
+	// TODO: streamline classes later
+	article.rich-text,
+	section.rich-text {
+		h2, h3, h4, h5 {
+			font-size: var(--FONT-SIZE-MD);
+			font-weight: 700;
+			line-height: 1.333;
+			margin-bottom: 0.5em;
+		}
+		h2, h3 {
+			text-transform: uppercase;
+			letter-spacing: 0.05em;
+
+			+ p {
+				margin-top: 0.5em;
+			}
+		}
+		h4 {
+		}
+		h5 {
+			font-style: italic;
+		}
+		h6 {
+			font-size: var(--FONT-SIZE-MD);
+			font-weight: 400;
+			line-height: 1.333;
+			font-style: italic;
+		}
+		p {
+			&:last-child {
+				margin-bottom: 0;
+			}
+			
+			a {
+				color: var(--COLOR-ORANGE);
+				transition: color 250ms ease;
+
+				&:hover {
+					color: var(--COLOR-ORANGE-HOVER);
+				}
+			}
+		}
+		ul, ol {
+			list-style-position: outside;
+			list-style-type: none;
+			margin: 0 0 1em;
+			padding: 0;
+
+			> li {
+				margin-left: calc(var(--GRID-CELL) * 0.667);
+
+				&::before {
+					content: "·";
+					display: block;
+					height: 0;
+					font-weight: bold;
+					margin: 0 calc(var(--GRID-CELL) * 0.667) 0 calc(var(--GRID-CELL) * -0.667);
+				}
+			}
+		}
+
+		ol {
+			counter-reset: rsm-counter;
+
+			> li {
+				counter-increment: rsm-counter;
+
+				&::before {
+					content: counter(alt-counter) ".";
+					font-weight: 400;
+				}
+			}
+		}
+
+		&.xxs > p,
+		&.xxs > ul,
+		&.xxs > ol { 
+			@extend .xxs;
+		}
+
+		&.xs > p,
+		&.xs > ul,
+		&.xs > ol { 
+			@extend .xs;
+		}
+
+		&.sm > p,
+		&.sm > ul,
+		&.sm > ol { 
+			@extend .sm;
+		}
+
+		&.md > p,
+		&.md > ul,
+		&.md > ol { 
+			@extend .md;
+		}
+
+		&.lg > p,
+		&.lg > ul,
+		&.lg > ol { 
+			@extend .lg;
+		}
+
+		&.xl > p,
+		&.xl > ul,
+		&.xl > ol { 
+			@extend .xl;
+		}
+
+		&.xl > h3 {
+			@extend .xxxl;
+			@extend .lowercase;
+		}
+
+		&.xxl > p,
+		&.xxl > ul,
+		&.xxl > ol { 
+			@extend .xxl;
+		}
+
+		&.xxxl > p,
+		&.xxxl > ul,
+		&.xxxl > ol { 
+			@extend .xxxl;
+		}
+
+		> figure {
+			margin: 0;
+
+			> img {
+				max-width: 100%;
+			}
+		}
+
+		> .caps {
+			@extend .caps;
+		}
+		> .lowercase {
+			@extend .lowercase;
+		}
+
+	}
+}

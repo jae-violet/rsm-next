@@ -1,0 +1,26 @@
+services:
+  - name: rsm-web-prod
+    type: web
+    env: node
+    region: oregon
+    plan: free
+    branch: main
+    buildCommand: npm run install:web && npm run build:web
+    startCommand: npm run start:web
+  - name: rsm-cms-prod
+    type: web
+    env: node
+    region: oregon
+    plan: free
+    branch: main
+    buildCommand: npm run install:cms && npm run build:cms
+    startCommand: npm run start:cms
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: rsm-cms-db-prod
+          property: connectionString
+
+databases:
+  - name: rsm-cms-db-prod
+    plan: free

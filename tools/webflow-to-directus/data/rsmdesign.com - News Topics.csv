@@ -1,0 +1,6 @@
+name,slug,collection_id,item_id,created_on,updated_on,published_on
+Awards,awards,5ef105f5ed1dd0ca9428d749,5ef10623b81a822746e5463f,Mon Jun 22 2020 19:27:31 GMT+0000 (Coordinated Universal Time),Mon Jun 22 2020 19:27:31 GMT+0000 (Coordinated Universal Time),Mon Jun 22 2020 19:52:23 GMT+0000 (Coordinated Universal Time)
+Education,education,5ef105f5ed1dd0ca9428d749,5ef106188190db6344c11e2d,Mon Jun 22 2020 19:27:20 GMT+0000 (Coordinated Universal Time),Mon Jun 22 2020 19:27:20 GMT+0000 (Coordinated Universal Time),Mon Jun 22 2020 19:52:23 GMT+0000 (Coordinated Universal Time)
+Press,press,5ef105f5ed1dd0ca9428d749,5ef1061f99676814c51bac76,Mon Jun 22 2020 19:27:27 GMT+0000 (Coordinated Universal Time),Wed Aug 12 2020 11:40:41 GMT+0000 (Coordinated Universal Time),Wed Aug 12 2020 12:00:41 GMT+0000 (Coordinated Universal Time)
+Project Updates,project-updates,5ef105f5ed1dd0ca9428d749,5ef1060c3803066b622d7695,Mon Jun 22 2020 19:27:08 GMT+0000 (Coordinated Universal Time),Wed Aug 12 2020 11:40:29 GMT+0000 (Coordinated Universal Time),Wed Aug 12 2020 12:00:41 GMT+0000 (Coordinated Universal Time)
+RSM Culture,rsm-culture,5ef105f5ed1dd0ca9428d749,5ef1061342aafd8e21362a10,Mon Jun 22 2020 19:27:15 GMT+0000 (Coordinated Universal Time),Wed Aug 12 2020 11:40:19 GMT+0000 (Coordinated Universal Time),Wed Aug 12 2020 12:00:41 GMT+0000 (Coordinated Universal Time)

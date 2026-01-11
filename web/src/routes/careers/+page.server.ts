@@ -1,0 +1,388 @@
+import type { CareersIndexPageQuery } from "$lib/__generated__/graphql";
+import { gql } from "graphql-request";
+import type { PageServerLoad } from "./$types";
+import { cmsClient } from "$lib/cms";
+import { error } from "@sveltejs/kit";
+
+export const _query = gql`
+	query CareersIndexPage {
+		careers_page {
+			seo_title
+			seo_page_description
+			use_page_blocks
+			page_content {
+				item {
+					__typename
+					... on page_block_accordion {
+						span_columns
+						col_units
+						col_start
+						padding_left
+						padding_right
+						span_rows
+						padding_top
+						anchor_id
+						first_item_open
+						one_at_a_time
+						items
+					}
+					... on page_block_accordion_with_slider {
+						padding_top
+						anchor_id
+						layout
+						accordion_position
+						slider_items {
+							heading
+							rich_text
+							cta_text
+							cta_link
+							image {
+								filename_disk
+								title
+								description
+							}
+						}
+					}
+					... on page_block_before_after_swiper {
+						span_columns
+						col_units
+						col_start
+						padding_left
+						padding_right
+						span_rows
+						padding_top
+						anchor_id
+						images {
+							directus_files_id {
+								filename_disk
+								title
+								description
+							}
+						}
+						swiper_start_position
+					}
+					... on page_block_blockquote {
+						span_columns
+						col_units
+						col_start
+						padding_left
+						padding_right
+						span_rows
+						padding_top
+						anchor_id
+						attribution
+						body
+						citation
+						font_size
+					}
+					... on page_block_cards {
+						span_columns
+						col_units
+						col_start
+						padding_left
+						padding_right
+						span_rows
+						padding_top
+						anchor_id
+						cards_per_row
+						row_divider_color
+						card_padding_horizontal
+						card_padding_vertical
+						callout_size
+						text_size
+						text_padding
+						text_alignment
+						image_mask
+						image_padding
+						image_hover_effect
+						cta_alignment
+						card_items {
+							image {
+								filename_disk
+								title
+								description
+							}
+							callout
+							callout_size_override
+							rich_text
+							cta_text
+							cta_link
+							cta_alignment_override
+						}
+					}
+					... on page_block_carousel {
+						id
+						span_columns
+						col_units
+						col_start
+						padding_left
+						padding_right
+						span_rows
+						padding_top
+						anchor_id
+						images_per_slide
+						animation
+						animation_duration_ms
+						autoplay
+						autoplay_interval
+						show_indexes
+						show_arrows
+						images {
+							directus_files_id {
+								filename_disk
+								title
+								description
+							}
+						}
+					}
+					... on page_block_cta {
+						span_columns
+						col_units
+						col_start
+						padding_left
+						padding_right
+						span_rows
+						padding_top
+						anchor_id
+						heading_size
+						heading
+						text_size
+						text_alignment
+						link
+						text
+					}
+					... on page_block_cta_list {
+						span_columns
+						col_units
+						col_start
+						padding_left
+						padding_right
+						span_rows
+						padding_top
+						anchor_id
+						items
+					}
+					... on page_block_cta_list_with_slider {
+						padding_top
+						anchor_id
+						layout
+						list_position
+						list_items {
+							linkUrl
+							linkText
+							image {
+								filename_disk
+								title
+								description
+							}
+						}
+					}
+					... on page_block_featured_page {
+						span_columns
+						col_units
+						col_start
+						span_rows
+						padding_top
+						anchor_id
+						media_position
+						background_image {
+							filename_disk
+							title
+							description
+						}
+						background_image_mobile {
+							filename_disk
+							title
+							description
+						}
+						youtube_id
+						vimeo_id
+						small_subheading
+						large_primary_heading
+						rich_text
+						cta_text
+						cta_link
+						heading_only
+						white_text
+					}
+					... on page_block_heading {
+						span_columns
+						col_units
+						col_start
+						padding_left
+						padding_right
+						span_rows
+						row_alignment
+						padding_top
+						anchor_id
+						type
+						primary_heading
+						small_heading
+						large_heading
+						superscript_text
+					}
+					... on page_block_image_row {
+						span_columns
+						col_units
+						col_start
+						padding_left
+						padding_right
+						span_rows
+						padding_top
+						anchor_id
+						layout
+						caption
+						images {
+							directus_files_id {
+								title
+								description
+								filename_disk
+							}
+						}
+						emptyColumn
+						fullBleedColumns
+					}
+					... on page_block_list {
+						span_columns
+						col_units
+						col_start
+						padding_left
+						padding_right
+						span_rows
+						padding_top
+						anchor_id
+						link_hover_effect
+						heading_size
+						text_size
+						text_alignment
+						section_heading
+						items
+						list_columns
+						view_more_text
+						view_more_link
+					}
+					... on page_block_projects_grid {
+						padding_top
+						anchor_id
+						num_projects
+						load_functionality
+						grid_type
+						show_filters
+					}
+					... on page_block_rich_text {
+						span_columns
+						col_units
+						col_start
+						padding_left
+						padding_right
+						span_rows
+						padding_top
+						anchor_id
+						text_size
+						content
+					}
+					... on page_block_spacer {
+						id
+					}
+					... on page_block_video {
+						span_columns
+						col_units
+						col_start
+						padding_left
+						padding_right
+						span_rows
+						padding_top
+						anchor_id
+						vimeo_id
+						youtube_id
+						native_video {
+							id
+							title
+							type
+							filename_disk
+						}
+						enable_autoplay
+						enable_looping
+						enable_controls
+					}
+					... on page_block_testimonial_carousel {
+						heading
+						testimonials {
+							item {
+								...on testimonials {
+									quote_attribution
+									quote_attribution_job_title
+									company_name
+									quote
+									banner_image {
+										title
+										description
+										filename_disk
+									}
+									associated_project {
+										slug
+										project_title
+										location
+									}
+								}
+							}
+						}
+					}
+					... on page_block_split_content {
+						kicker
+						kicker_link
+						heading
+						dek
+						description
+						cta_text
+						cta_link
+						media_type
+						media_position
+						image {
+							filename_disk
+							title
+							description
+						}
+						video {
+							filename_disk
+							type
+							title
+							description
+						}
+						autoplay
+						loop
+						show_controls
+					}
+				}
+			}
+		}
+		careers(sort: ["sort"], filter: { visibility: { _eq: "visible" } }) {
+			slug
+			name
+			seo_page_description
+		}
+		team(
+			filter: { banner_grid_image_sort: { _neq: "0" }, visibility: { _eq: "visible" } }
+			sort: ["-banner_grid_image_sort"]
+			limit: 24
+		) {
+			slug
+			banner_grid_image_color {
+				title
+				description
+				filename_disk
+			}
+			has_profile_page
+		}
+	}
+`;
+
+export const load: PageServerLoad = async ({ params }) => {
+	const res = await cmsClient.CareersIndexPage();
+
+	return {
+		careers_page: res.careers_page,
+		careers: res.careers,
+		team: res.team
+	};
+};

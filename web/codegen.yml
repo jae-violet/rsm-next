@@ -1,0 +1,15 @@
+overwrite: true
+schema: "https://rsm-cms-prod.onrender.com/graphql"
+documents:
+  - "src/**/*.gql"
+  - "src/**/*.ts"
+  - "!src/generated/**/*.ts"
+generates:
+  src/generated/graphql.ts:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-graphql-request"
+  ./graphql.schema.json:
+    plugins:
+      - "introspection"
