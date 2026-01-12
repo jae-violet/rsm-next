@@ -3,7 +3,8 @@
 	import { assetUrl } from "$lib/cms/assets";
 	import { request } from "graphql-request";
 	import { env } from "$env/dynamic/public";
-	import { dataFeedQuery } from "$lib/cms/dataFeedQueries";
+
+	import Card, { type CardData } from "../../molecules/Card.svelte";
 
 	// Types
 	export type DataFeedData = {
@@ -35,6 +36,12 @@
 				name?: string | null
 			}
 		}[]
+		feed_view?: string | null;
+		feed_load_functionality?: string | null;
+		feed_grid_columns?: number | null;
+		feed_grid_style?: string | null;
+		feed_grid_rows_per_load?: number | null;
+		feed_cards?: CardData[] | null;
 	}
 
 	// Props
@@ -62,153 +69,149 @@
 
   // Lifecycle
   onMount(async () => {
-	// // Data based variables
-	// let limit;
-
-	// // Set limit
-	// if (data.limit_posts_to !== null) {
-	//   limit = data.limit_posts_to;
-	// }
-
-	// // Calculate projects per row
-	// if (data.projects_per_row === 4) {
-	//   displayCount = 8;
-	//   loadCount = 8;
-	// }
-
-	// // Calculate total rows
-	// if (data.limit_posts_to) {
-	//   totalLimit = data.limit_posts_to;
-	// }
+	let numItems: number;
+	if (data.feed_view === "grid") {
+		if (data.feed_grid_style === "dynamic") {
+			if (data.feed_grid_columns === 3) {
+				numItems = 14;
+			} else {
+				numItems = 10;
+			}
+		} else {
+			numItems = data.feed_grid_columns * feed_grid_rows_per_load;
+		}
+	} else {
+		numItems = 10;
+	}
 
 	switch (data.feed_source) {
-	case "Projects": {
-		let filters = [];
+		case "Projects": {
+			let filters = [];
 
-		// Extract markets
-		if (data.feed_filter_markets && data.feed_filter_markets.length > 0) {
-			let markets = [];
-			for (let item of data.feed_filter_markets) {
-				if (item?.markets_id?.name) {
-					markets.push(`"${item.markets_id.name}"`);
-				}
-			}
-			filters.push(`{ markets: { markets_id: { name: { _in: [${markets.join(",")}] } } } }`);
-		}
-
-		// Extract services
-		if (data.feed_filter_services && data.feed_filter_services.length > 0) {
-			let services = [];
-			for (let item of data.feed_filter_services) {
-				if (item?.services_id?.name) {
-					services.push(`"${item.services_id.name}"`);
-				}
-			}
-			filters.push(`{ services: { services_id: { name: { _in: [${services.join(",")}] } } } }`);
-		}
-
-		// Extract cities
-		if (data.feed_filter_location_cities && data.feed_filter_location_cities.length > 0) {
-			let cities = [];
-			for (let item of data.feed_filter_location_cities) {
-				if (item?.locations_cities_id?.city_name) {
-					cities.push(`"${item.locations_cities_id.city_name}"`);
-				}
-			}
-			filters.push(`{ project_location_city: { city_name: { _in: [${cities.join(",")}] } } }`);
-		}
-
-		let query = `
-			query Projects($limit: Int) {
-				projects(
-					limit: $limit
-					filter: { 
-						_and: [
-							{ visibility: { _nin: ["draft", "archived"] } },
-							{
-								_${data.feed_filter_logic}: [
-									${filters.join(",\n")}
-								]
-							}
-						]
-					}
-				) {
-					slug
-					project_title
-					location
-					grid_image {
-						filename_disk
-						title
-						description
+			// Extract markets
+			if (data.feed_filter_markets && data.feed_filter_markets.length > 0) {
+				let markets = [];
+				for (let item of data.feed_filter_markets) {
+					if (item?.markets_id?.name) {
+						markets.push(`"${item.markets_id.name}"`);
 					}
 				}
+				filters.push(`{ markets: { markets_id: { name: { _in: [${markets.join(",")}] } } } }`);
 			}
-		`
 
-		let response = await request(env.PUBLIC_DIRECTUS_API_URL, query, {});
-		
-		if(response) {
-			console.log(response);
-			feedData = response.projects;
-			loaded = true;
-		}
-		break;
-	}
-	case "Articles": {
-		let filters = [];
-
-		if (data.feed_filter_topics && data.feed_filter_topics.length > 0) {
-			let topics = [];
-			for (let item of data.feed_filter_topics) {
-				if (item?.news_topics_id?.name) {
-					topics.push(`"${item.news_topics_id.name}"`);
-				}
-			}
-			filters.push(`{ topics_list: { _eq: ${topics.join(" ")} } }`);
-		}
-
-		let query = `
-			query Articles($limit: Int) {
-				news_posts(
-					limit: $limit
-					sort: [ "-published_date" ]
-					filter: {
-						_${data.feed_filter_logic}: [
-							${filters.join(",\n")}
-						]
-					}
-				) {
-					slug
-					post_title
-					published_date
-					grid_image {
-						filename_disk
-						description
+			// Extract services
+			if (data.feed_filter_services && data.feed_filter_services.length > 0) {
+				let services = [];
+				for (let item of data.feed_filter_services) {
+					if (item?.services_id?.name) {
+						services.push(`"${item.services_id.name}"`);
 					}
 				}
+				filters.push(`{ services: { services_id: { name: { _in: [${services.join(",")}] } } } }`);
 			}
-		`
-		let response = await request(env.PUBLIC_DIRECTUS_API_URL, query, {});
-		
-		if(response) {
-			console.log(response);
-			feedData = response.news_posts;
-			loaded = true;
+
+			// Extract cities
+			if (data.feed_filter_location_cities && data.feed_filter_location_cities.length > 0) {
+				let cities = [];
+				for (let item of data.feed_filter_location_cities) {
+					if (item?.locations_cities_id?.city_name) {
+						cities.push(`"${item.locations_cities_id.city_name}"`);
+					}
+				}
+				filters.push(`{ project_location_city: { city_name: { _in: [${cities.join(",")}] } } }`);
+			}
+
+			let query = `
+				query Projects($limit: Int) {
+					projects(
+						limit: $limit
+						filter: { 
+							_and: [
+								{ visibility: { _nin: ["draft", "archived"] } },
+								{
+									_${data.feed_filter_logic}: [
+										${filters.join(",\n")}
+									]
+								}
+							]
+						}
+					) {
+						slug
+						project_title
+						location
+						grid_image {
+							filename_disk
+							title
+							description
+						}
+					}
+				}
+			`
+
+			let response = await request(env.PUBLIC_DIRECTUS_API_URL, query, {});
+			
+			if(response) {
+				console.log(response);
+				feedData = response.projects;
+				loaded = true;
+			}
+			break;
 		}
-		break;
-	}
-	case "Team": {
-		break;
-	}
-	case "Awards": {
-		break;
-	}
-	case "Testimonials": {
-		break;
-	}
-	case "Manual": {
-		break;
-	}
+		case "Articles": {
+			let filters = [];
+
+			if (data.feed_filter_topics && data.feed_filter_topics.length > 0) {
+				let topics = [];
+				for (let item of data.feed_filter_topics) {
+					if (item?.news_topics_id?.name) {
+						topics.push(`"${item.news_topics_id.name}"`);
+					}
+				}
+				filters.push(`{ topics_list: { _eq: ${topics.join(" ")} } }`);
+			}
+
+			let query = `
+				query Articles($limit: Int) {
+					news_posts(
+						limit: $limit
+						sort: [ "-published_date" ]
+						filter: {
+							_${data.feed_filter_logic}: [
+								${filters.join(",\n")}
+							]
+						}
+					) {
+						slug
+						post_title
+						published_date
+						grid_image {
+							filename_disk
+							description
+						}
+					}
+				}
+			`
+			let response = await request(env.PUBLIC_DIRECTUS_API_URL, query, {});
+			
+			if(response) {
+				console.log(response);
+				feedData = response.news_posts;
+				loaded = true;
+			}
+			break;
+		}
+		case "Team": {
+			break;
+		}
+		case "Awards": {
+			break;
+		}
+		case "Testimonials": {
+			break;
+		}
+		case "Manual": {
+			break;
+		}
 	}
 
   });
