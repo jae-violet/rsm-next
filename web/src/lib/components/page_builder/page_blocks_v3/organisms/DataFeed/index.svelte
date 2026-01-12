@@ -252,21 +252,6 @@
 							     feed_grid_style: data.feed_grid_style
 							 } }
 					/>
-					{#each feedData as project}
-						<a class="grid-item"
-						   href="/work/{project.slug}"
-						>
-							<figure>
-								<img src={assetUrl(project.grid_image?.filename_disk)}
-									 alt={project.grid_image?.title}
-								/>
-								<figcaption>
-									<h3 class="xl">{project.project_title}</h3>
-									<p>{project.location}</p>
-								</figcaption>
-							</figure>
-						</a>
-					{/each}
 				{:else}
 					<DataFeedTable {feedData} />
 				{/if}
@@ -297,23 +282,6 @@
 		grid-column: viewport;
 		display: grid;
 		grid-template-columns: subgrid;
-
-		> a > figure > img {
-			max-width: 100%;
-		}
-
-		> a:nth-of-type(4n+1) {
-			grid-column: eighth-start 1 / eighth-end 2;
-		}
-		> a:nth-of-type(4n+2) {
-			grid-column: eighth-start 3 / eighth-end 4;
-		}
-		> a:nth-of-type(4n+3) {
-			grid-column: eighth-start 5 / eighth-end 6;
-		}
-		> a:nth-of-type(4n) {
-			grid-column: eighth-start 7 / eighth-end 8;
-		}
 	}
   .advanced-project-grid {
 	display: flex;
