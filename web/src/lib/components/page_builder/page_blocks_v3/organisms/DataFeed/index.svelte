@@ -40,9 +40,9 @@
 		}[]
 		feed_view?: string | null;
 		feed_load_functionality?: string | null;
-		feed_grid_columns?: number | null;
+		feed_grid_columns: number;
 		feed_grid_style?: string | null;
-		feed_grid_rows_per_load?: number | null;
+		feed_grid_rows_per_load: number;
 		feed_cards?: CardData[] | null;
 	}
 
@@ -55,23 +55,23 @@
 	let feedData: any[] = [];
 	let displayCount: number = 6;
 	let totalLimit: number = 24;
-	let loadCount: number = 6;
+	let numItems: number = 6;
+	let loadOffset: number = 0;
 
 	// Load more functionality
 	const loadMore = () => {
-		if (loadCount < totalLimit) {
-			loadCount += displayCount;
+		if (loadOffset < totalLimit) {
+			loadOffset += displayCount;
 		}
 	}
 
 	// Show less functionality
 	const showLess = () => {
-		loadCount = displayCount;
+		numItems = displayCount;
 	}
 
   // Lifecycle
   onMount(async () => {
-	let numItems: number;
 	if (data.feed_view === "grid") {
 		if (data.feed_grid_style === "dynamic") {
 			if (data.feed_grid_columns === 3) {
@@ -80,7 +80,7 @@
 				numItems = 10;
 			}
 		} else {
-			numItems = data.feed_grid_columns * feed_grid_rows_per_load;
+			numItems = data.feed_grid_columns * data.feed_grid_rows_per_load;
 		}
 	} else {
 		numItems = 10;
@@ -124,9 +124,10 @@
 			}
 
 			let query = `
-				query Projects($limit: Int) {
+				query Projects($limit: Int, $offset: Int) {
 					projects(
 						limit: $limit
+						offset: $offset
 						filter: { 
 							_and: [
 								{ visibility: { _nin: ["draft", "archived"] } },
@@ -153,9 +154,11 @@
 						}
 					}
 				}
-			`
+			`;
 
-			let response = await request(env.PUBLIC_DIRECTUS_API_URL, query, {});
+			let response = await request(env.PUBLIC_DIRECTUS_API_URL, query, {
+				offset: loadOffset,
+			});
 			
 			if(response) {
 				console.log(response);
@@ -239,7 +242,7 @@
 							     feed_grid_style: data.feed_grid_style
 							 } }
 					/>
-					{#each feedData.slice(0, loadCount) as project}
+					{#each feedData.slice(0, numItems) as project}
 						<a class="grid-item"
 						   href="/work/{project.slug}"
 						>
@@ -269,10 +272,15 @@
 			{/if}
 		</a>
 	{:else}
-		{#if loadCount < totalLimit}
+		{#if numItems < totalLimit}
 			
 		{/if}
 	{/if}
+
+	<button on:click={loadMore}>
+		View More
+	</button>
+
 </template>
 
 <style lang="scss">
