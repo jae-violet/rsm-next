@@ -53,15 +53,12 @@
 	// Stateful component variables
 	$: feedData = [];
 	let loaded = false;
-	let displayCount: number = 6;
-	let totalLimit: number = 24;
-	let numItems: number = 6;
-	let loadOffset: number = 0;
+	let numItems: number = 10;
+	$: loadOffset = 0;
+	let loadTotalCount: number = 0;
 
 	// Load more functionality
 	const loadMore = async () => {
-		if (loadOffset >= totalLimit) return;
-
 		if (data.feed_view === "grid") {
 			if (data.feed_grid_style === "dynamic") {
 				if (data.feed_grid_columns === 3) {
@@ -143,6 +140,22 @@
 								description
 							}
 						}
+						projects_aggregated(
+							filter: { 
+								_and: [
+									{ visibility: { _nin: ["draft", "archived"] } },
+									{
+										_${data.feed_filter_logic}: [
+											${filters.join(",\n")}
+										]
+									}
+								]
+							}
+						) {
+							count {
+								id
+							}
+						}
 					}
 				`;
 
@@ -156,6 +169,7 @@
 					feedData.push(...response.projects);
 					feedData = feedData;
 					loaded = true;
+					loadTotalCount = response.projects_aggregated?.[0]?.count?.id ?? 0;
 				}
 				break;
 			}
@@ -192,6 +206,17 @@
 								description
 							}
 						}
+						news_posts_aggregated(
+							filter: {
+								_${data.feed_filter_logic}: [
+									${filters.join(",\n")}
+								]
+							})
+						{
+							count {
+								id
+							}
+						}
 					}
 				`
 				let response = await request(env.PUBLIC_DIRECTUS_API_URL, query, {
@@ -204,6 +229,7 @@
 					feedData.push(...response.news_posts);
 					feedData = feedData;
 					loaded = true;
+					loadTotalCount = response.news_posts_aggregated?.[0]?.count?.id ?? 0;
 				}
 				break;
 			}
@@ -224,11 +250,6 @@
 		loadOffset += numItems;
 
 		console.log(feedData);
-	}
-
-	// Show less functionality
-	const showLess = () => {
-		numItems = displayCount;
 	}
 
 	// Lifecycle
@@ -265,14 +286,12 @@
 					<span>View more projects</span>
 				{/if}
 			</a>
-		{:else}
-			{#if numItems < totalLimit}
-				
-			{/if}
 		{/if}
-		<button on:click={loadMore}>
-			View More
-		</button>
+		{#if loadOffset < loadTotalCount}
+			<button on:click={loadMore}>
+				View More
+			</button>
+		{/if}
 	</section>
 
 </template>
