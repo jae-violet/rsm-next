@@ -51,18 +51,179 @@
 	export let order: number;
 
 	// Stateful component variables
+	$: feedData = [];
 	let loaded = false;
-	let feedData: any[] = [];
 	let displayCount: number = 6;
 	let totalLimit: number = 24;
 	let numItems: number = 6;
 	let loadOffset: number = 0;
 
 	// Load more functionality
-	const loadMore = () => {
-		if (loadOffset < totalLimit) {
-			loadOffset += displayCount;
+	const loadMore = async () => {
+		if (loadOffset >= totalLimit) return;
+
+		if (data.feed_view === "grid") {
+			if (data.feed_grid_style === "dynamic") {
+				if (data.feed_grid_columns === 3) {
+					numItems = 14;
+				} else {
+					numItems = 10;
+				}
+			} else {
+				numItems = data.feed_grid_columns * data.feed_grid_rows_per_load;
+			}
+		} else {
+			numItems = 10;
 		}
+
+		switch (data.feed_source) {
+			case "Projects": {
+				let filters = [];
+
+				// Extract markets
+				if (data.feed_filter_markets && data.feed_filter_markets.length > 0) {
+					let markets = [];
+					for (let item of data.feed_filter_markets) {
+						if (item?.markets_id?.name) {
+							markets.push(`"${item.markets_id.name}"`);
+						}
+					}
+					filters.push(`{ markets: { markets_id: { name: { _in: [${markets.join(",")}] } } } }`);
+				}
+
+				// Extract services
+				if (data.feed_filter_services && data.feed_filter_services.length > 0) {
+					let services = [];
+					for (let item of data.feed_filter_services) {
+						if (item?.services_id?.name) {
+							services.push(`"${item.services_id.name}"`);
+						}
+					}
+					filters.push(`{ services: { services_id: { name: { _in: [${services.join(",")}] } } } }`);
+				}
+
+				// Extract cities
+				if (data.feed_filter_location_cities && data.feed_filter_location_cities.length > 0) {
+					let cities = [];
+					for (let item of data.feed_filter_location_cities) {
+						if (item?.locations_cities_id?.city_name) {
+							cities.push(`"${item.locations_cities_id.city_name}"`);
+						}
+					}
+					filters.push(`{ project_location_city: { city_name: { _in: [${cities.join(",")}] } } }`);
+				}
+
+				let query = `
+					query Projects($limit: Int, $offset: Int) {
+						projects(
+							limit: $limit
+							offset: $offset
+							filter: { 
+								_and: [
+									{ visibility: { _nin: ["draft", "archived"] } },
+									{
+										_${data.feed_filter_logic}: [
+											${filters.join(",\n")}
+										]
+									}
+								]
+							}
+						) {
+							slug
+							project_title
+							location
+							grid_image {
+								filename_disk
+								title
+								description
+							}
+							hero_image {
+								filename_disk
+								title
+								description
+							}
+						}
+					}
+				`;
+
+				let response = await request(env.PUBLIC_DIRECTUS_API_URL, query, {
+					limit: numItems,
+					offset: loadOffset,
+				});
+				
+				if(response) {
+					console.log(response);
+					feedData.push(...response.projects);
+					feedData = feedData;
+					loaded = true;
+				}
+				break;
+			}
+			case "Articles": {
+				let filters = [];
+
+				if (data.feed_filter_topics && data.feed_filter_topics.length > 0) {
+					let topics = [];
+					for (let item of data.feed_filter_topics) {
+						if (item?.news_topics_id?.name) {
+							topics.push(`"${item.news_topics_id.name}"`);
+						}
+					}
+					filters.push(`{ topics_list: { _eq: ${topics.join(" ")} } }`);
+				}
+
+				let query = `
+					query Articles($limit: Int, $offset: Int) {
+						news_posts(
+							limit: $limit
+							offset: $offset
+							sort: [ "-published_date" ]
+							filter: {
+								_${data.feed_filter_logic}: [
+									${filters.join(",\n")}
+								]
+							}
+						) {
+							slug
+							post_title
+							published_date
+							grid_image {
+								filename_disk
+								description
+							}
+						}
+					}
+				`
+				let response = await request(env.PUBLIC_DIRECTUS_API_URL, query, {
+					limit: numItems,
+					offset: loadOffset,
+				});
+				
+				if(response) {
+					console.log(response);
+					feedData.push(...response.news_posts);
+					feedData = feedData;
+					loaded = true;
+				}
+				break;
+			}
+			case "Team": {
+				break;
+			}
+			case "Awards": {
+				break;
+			}
+			case "Testimonials": {
+				break;
+			}
+			case "Manual": {
+				break;
+			}
+		}
+
+		loadOffset += numItems;
+
+		console.log(feedData);
 	}
 
 	// Show less functionality
@@ -70,161 +231,10 @@
 		numItems = displayCount;
 	}
 
-  // Lifecycle
-  onMount(async () => {
-	if (data.feed_view === "grid") {
-		if (data.feed_grid_style === "dynamic") {
-			if (data.feed_grid_columns === 3) {
-				numItems = 14;
-			} else {
-				numItems = 10;
-			}
-		} else {
-			numItems = data.feed_grid_columns * data.feed_grid_rows_per_load;
-		}
-	} else {
-		numItems = 10;
-	}
-
-	switch (data.feed_source) {
-		case "Projects": {
-			let filters = [];
-
-			// Extract markets
-			if (data.feed_filter_markets && data.feed_filter_markets.length > 0) {
-				let markets = [];
-				for (let item of data.feed_filter_markets) {
-					if (item?.markets_id?.name) {
-						markets.push(`"${item.markets_id.name}"`);
-					}
-				}
-				filters.push(`{ markets: { markets_id: { name: { _in: [${markets.join(",")}] } } } }`);
-			}
-
-			// Extract services
-			if (data.feed_filter_services && data.feed_filter_services.length > 0) {
-				let services = [];
-				for (let item of data.feed_filter_services) {
-					if (item?.services_id?.name) {
-						services.push(`"${item.services_id.name}"`);
-					}
-				}
-				filters.push(`{ services: { services_id: { name: { _in: [${services.join(",")}] } } } }`);
-			}
-
-			// Extract cities
-			if (data.feed_filter_location_cities && data.feed_filter_location_cities.length > 0) {
-				let cities = [];
-				for (let item of data.feed_filter_location_cities) {
-					if (item?.locations_cities_id?.city_name) {
-						cities.push(`"${item.locations_cities_id.city_name}"`);
-					}
-				}
-				filters.push(`{ project_location_city: { city_name: { _in: [${cities.join(",")}] } } }`);
-			}
-
-			let query = `
-				query Projects($limit: Int, $offset: Int) {
-					projects(
-						limit: $limit
-						offset: $offset
-						filter: { 
-							_and: [
-								{ visibility: { _nin: ["draft", "archived"] } },
-								{
-									_${data.feed_filter_logic}: [
-										${filters.join(",\n")}
-									]
-								}
-							]
-						}
-					) {
-						slug
-						project_title
-						location
-						grid_image {
-							filename_disk
-							title
-							description
-						}
-						hero_image {
-							filename_disk
-							title
-							description
-						}
-					}
-				}
-			`;
-
-			let response = await request(env.PUBLIC_DIRECTUS_API_URL, query, {
-				offset: loadOffset,
-			});
-			
-			if(response) {
-				console.log(response);
-				feedData = response.projects;
-				loaded = true;
-			}
-			break;
-		}
-		case "Articles": {
-			let filters = [];
-
-			if (data.feed_filter_topics && data.feed_filter_topics.length > 0) {
-				let topics = [];
-				for (let item of data.feed_filter_topics) {
-					if (item?.news_topics_id?.name) {
-						topics.push(`"${item.news_topics_id.name}"`);
-					}
-				}
-				filters.push(`{ topics_list: { _eq: ${topics.join(" ")} } }`);
-			}
-
-			let query = `
-				query Articles($limit: Int) {
-					news_posts(
-						limit: $limit
-						sort: [ "-published_date" ]
-						filter: {
-							_${data.feed_filter_logic}: [
-								${filters.join(",\n")}
-							]
-						}
-					) {
-						slug
-						post_title
-						published_date
-						grid_image {
-							filename_disk
-							description
-						}
-					}
-				}
-			`
-			let response = await request(env.PUBLIC_DIRECTUS_API_URL, query, {});
-			
-			if(response) {
-				console.log(response);
-				feedData = response.news_posts;
-				loaded = true;
-			}
-			break;
-		}
-		case "Team": {
-			break;
-		}
-		case "Awards": {
-			break;
-		}
-		case "Testimonials": {
-			break;
-		}
-		case "Manual": {
-			break;
-		}
-	}
-
-  });
+	// Lifecycle
+	onMount(async () => {
+		loadMore();
+	});
 </script>
 
 <template>
@@ -242,7 +252,7 @@
 							     feed_grid_style: data.feed_grid_style
 							 } }
 					/>
-					{#each feedData.slice(0, numItems) as project}
+					{#each feedData as project}
 						<a class="grid-item"
 						   href="/work/{project.slug}"
 						>
