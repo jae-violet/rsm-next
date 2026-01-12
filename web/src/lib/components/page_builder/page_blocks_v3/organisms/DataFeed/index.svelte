@@ -228,7 +228,7 @@
 </script>
 
 <template>
-	<div class="feed">
+	<section>
 		{#key loaded}
 			{#if !loaded}
 				<p>Loading...</p>
@@ -262,32 +262,48 @@
 				{/if}
 			{/if}
 		{/key}
-	</div>
-	{#if data.cta_link}
-		<a href={data.cta_link}>
-			{#if data.cta_text}
-				<span>{data.cta_text}</span>
-			{:else}
-				<span>View more projects</span>
+		{#if data.cta_link}
+			<a href={data.cta_link}>
+				{#if data.cta_text}
+					<span>{data.cta_text}</span>
+				{:else}
+					<span>View more projects</span>
+				{/if}
+			</a>
+		{:else}
+			{#if numItems < totalLimit}
+				
 			{/if}
-		</a>
-	{:else}
-		{#if numItems < totalLimit}
-			
 		{/if}
-	{/if}
-
-	<button on:click={loadMore}>
-		View More
-	</button>
+		<button on:click={loadMore}>
+			View More
+		</button>
+	</section>
 
 </template>
 
 <style lang="scss">
-	.feed {
+	section {
 		grid-column: viewport;
 		display: grid;
 		grid-template-columns: subgrid;
+
+		> a > figure > img {
+			max-width: 100%;
+		}
+
+		> a:nth-of-type(4n+1) {
+			grid-column: eighth-start 1 / eighth-end 2;
+		}
+		> a:nth-of-type(4n+2) {
+			grid-column: eighth-start 3 / eighth-end 4;
+		}
+		> a:nth-of-type(4n+3) {
+			grid-column: eighth-start 5 / eighth-end 6;
+		}
+		> a:nth-of-type(4n) {
+			grid-column: eighth-start 7 / eighth-end 8;
+		}
 	}
   .advanced-project-grid {
 	display: flex;
