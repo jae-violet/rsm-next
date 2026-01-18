@@ -18,8 +18,6 @@
 	let nativeVideo: HTMLVideoElement;
 	let nativeMobileVideo: HTMLVideoElement;
 
-	$: console.log(data);
-
 	setProjectGridContext({
 		projects: data.projects,
 		totalProjectsCount: data.totalProjectsCount,
@@ -108,7 +106,7 @@
 						loading="lazy"
 						bind:this={vimeoPlayer}
 					/>
-				</div>	
+				</div>
 			{/if}
 		</figure>
 	{:else}

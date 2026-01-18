@@ -1,29 +1,22 @@
 <script lang="ts">
 	import { page } from "$app/stores";
+	import {
+		getNewsFiltersFromUrl,
+		getProjectFiltersFromUrl,
+		makeGraphqlNewsFilters,
+		makeGraphqlProjectFilters,
+		makeNewsFilterUrlParams,
+		makeProjectFilterUrlParams
+	} from "$lib/cms/filters";
+	import { request } from "graphql-request";
+	import { setContext, afterUpdate, onMount, tick } from 'svelte';
+	import { env } from "$env/dynamic/public";
 
 	export let headerHeight;
+	export let navMenu;
 
-	// NAV MENU
-	type NavItem = {
-		title: string;
-		to: string;
-	};
-
-	const navItems: NavItem[] = [
-		{ title: "About", to: "/about" },
-		{ title: "Work", to: "/work" },
-		{ title: "Services", to: "/expertise" },
-		{ title: "Markets", to: "/expertise#markets" },
-		{ title: "Contact", to: "/contact" },
-		{ title: "News & Ideas", to: "/news" },
-		{ title: "Search", to: "/search" }
-	];
-
-	$: checkActiveRoute = (navItem: NavItem): boolean => {
-		if (navItem.to === $page.url.pathname) {
-			return true;
-		}
-		return false;
+	$: checkActiveRoute = (path: string): boolean => {
+		return path == $page.url.pathname;
 	};
 
 	let menuOpen = false;
@@ -41,6 +34,86 @@
 			toggleMenu();
 		}
 	}
+
+	let oneLevelUpLink = "";
+	let oneLevelUpText = "";
+
+	onMount(async () => {
+		if ($page.url.pathname != "" && $page.url.pathname != "/") {
+			root_links: for (let item of navMenu.nav_menu_links) {
+				let link = item.nav_menu_links_id;
+				if (link.link_path == $page.url.pathname) {
+					// top-level navigation
+					oneLevelUpLink = "/";
+					oneLevelUpText = "Back to Home";
+					break root_links;
+				}
+
+				for (let childItem of link.link_children) {
+					let childLink = childItem.nav_menu_links_child_id;
+					if (childLink.link_path == $page.url.pathname) {
+						oneLevelUpLink = link.link_path;
+						oneLevelUpText = `Back to ${link.link_text}`;
+						break root_links;
+					}
+				}
+			}
+
+			if (oneLevelUpLink == "") {
+				oneLevelUpLink = "/";
+				oneLevelUpText = "Back to Home";
+			}
+		}
+
+		if ($page.url.pathname.startsWith("/work") && $page.url.pathname != "/work") {
+			let urlFilters = getProjectFiltersFromUrl($page.url.searchParams);
+
+			let serviceSlugs = Array.from(urlFilters.serviceFilterSlugs);
+			let marketSlugs = Array.from(urlFilters.marketFilterSlugs);
+
+			console.log("url filters:", serviceSlugs[0]);
+
+			let totalFilterCount = serviceSlugs.length + marketSlugs.length;
+			if (totalFilterCount == 0) {
+				oneLevelUpLink = "/work";
+				oneLevelUpText = "See more Work";
+			}
+			else if (totalFilterCount == 1) {
+				if (serviceSlugs.length > 0) {
+					let serviceSlug = serviceSlugs[0];
+					oneLevelUpLink = `/services/${serviceSlug}`;
+					let response = await request(env.PUBLIC_DIRECTUS_API_URL, `
+						query ServiceTitle {
+						  services(filter:  {
+						     slug: { _eq: "${serviceSlug}" }
+						  }) {
+						    name
+						  }
+						}
+					`);
+					oneLevelUpText = "See more " + response.services[0].name;
+				}
+				else if (marketSlugs.length > 0) {
+					let marketSlug = marketSlugs[0];
+					oneLevelUpLink = `/markets/${marketSlug}`;
+					let response = await request(env.PUBLIC_DIRECTUS_API_URL, `
+						query MarketTitle {
+						  markets(filter:  {
+						     slug: { _eq: "${marketSlug}" }
+						  }) {
+						    name
+						  }
+						}
+					`);
+					oneLevelUpText = "See more " + response.markets[0].name;
+				}
+			}
+			else {
+				oneLevelUpLink = `/work${makeProjectFilterUrlParams(urlFilters.serviceFilterSlugs, urlFilters.marketFilterSlugs)}`;
+				oneLevelUpText = "See more Work";
+			}
+		}
+	});
 </script>
 
 <template>
@@ -59,6 +132,9 @@
 					<span>·</span>
 					<p>Principle Centered Design</p>
 					-->
+				</div>
+				<div>
+					<a href={oneLevelUpLink}> {oneLevelUpText} </a>
 				</div>
 				<div
 					class="menu-button"
@@ -79,8 +155,9 @@
 		<div class="scrim" />
 		<nav class="menu" class:active={menuOpen}>
 			<ul>
-				{#each navItems as item}
-					<li><a class:active={checkActiveRoute(item)} href={item.to} on:click={toggleMenu}>{item.title}</a></li>
+				{#each navMenu.nav_menu_links as item}
+					{@const link = item.nav_menu_links_id}
+					<li><a class:active={checkActiveRoute(link.link_path)} href={link.link_path} on:click={toggleMenu}>{link.link_text}</a></li>
 				{/each}
 			</ul>
 		</nav>

@@ -115,7 +115,7 @@
 						projects(
 							limit: $limit
 							offset: $offset
-							filter: { 
+							filter: {
 								_and: [
 									{ visibility: { _nin: ["draft", "archived"] } },
 									{
@@ -141,7 +141,7 @@
 							}
 						}
 						projects_aggregated(
-							filter: { 
+							filter: {
 								_and: [
 									{ visibility: { _nin: ["draft", "archived"] } },
 									{
@@ -163,7 +163,7 @@
 					limit: numItems,
 					offset: loadOffset,
 				});
-				
+
 				if(response) {
 					console.log(response);
 					feedData.push(...response.projects);
@@ -223,7 +223,7 @@
 					limit: numItems,
 					offset: loadOffset,
 				});
-				
+
 				if(response) {
 					console.log(response);
 					feedData.push(...response.news_posts);

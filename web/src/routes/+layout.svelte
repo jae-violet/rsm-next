@@ -1,4 +1,5 @@
 <script lang="ts">
+	import type { PageData } from "./$types";
 	import Header from "$lib/components/Header.svelte";
 	import Footer from "$lib/components/Footer.svelte";
 	import { env } from "$env/dynamic/public";
@@ -7,6 +8,10 @@
 	import { navigating } from "$app/stores";
 	import { MIN_LOAD_TIME_MS, loading } from "$lib/loading";
 	import Loading from "$lib/components/Loading.svelte";
+
+	export let data: PageData;
+
+	$: console.log("layout data", data);
 
 	let headerHeight = "75px";
 	let navigationTimeout: NodeJS.Timeout | null = null;
@@ -57,11 +62,11 @@
 			behavior: 'smooth'
 		})
 
-		setTimeout( () => { 
+		setTimeout( () => {
 			window.scrollTo({
-				top: 0, 
+				top: 0,
 				behavior: 'smooth'
-			}) 
+			})
 		}, 150);
 	});
 
@@ -78,7 +83,7 @@
 
 <template>
 	<Loading />
-	<Header {headerHeight} />
+	<Header {headerHeight} navMenu={data.nav_menu} />
 	<main style:--HEADER-HEIGHT={headerHeight}>
 		<slot />
 	</main>
