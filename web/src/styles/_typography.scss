@@ -101,14 +101,15 @@ $BREAKPOINT-LG: 125em;
 		&:not(article.rich-text) { 
 		// This is needed to overrule the specificity of what's below
 			margin: 0;
-			font-weight: 700;
+			font-weight: 400;
 
 			&.xxs, &.xs, &.sm, &.md, &.lg, &.xl, &.xxl, &.xxxl {
-				font-weight: 700;
+				font-weight: 400;
 			}
 
-			&.xxs, &.xs, &.sm, &.md {
+			&.xxs, &.xs, &.sm, &.md, &.lg {
 				@extend .caps;
+				font-weight: 700;
 				line-height: 1.333;
 				margin-bottom: 0.5em;
 
