@@ -15,7 +15,7 @@
 		change_breadcrumbs?: boolean | null;
 		section_anchor_text?: string | null;
 		section_anchor_link?: string | null;
-		feed_source: string;
+		feed_source?: string;
 		feed_show_filter_menu?: boolean | null;
 		feed_filter_logic?: string | null;
 		feed_filter_markets?: {
@@ -40,9 +40,9 @@
 		}[]
 		feed_view?: string | null;
 		feed_load_functionality?: string | null;
-		feed_grid_columns: number;
+		feed_grid_columns?: number;
 		feed_grid_style?: string | null;
-		feed_grid_rows_per_load: number;
+		feed_grid_rows_per_load?: number;
 		feed_cards?: CardData[] | null;
 	}
 

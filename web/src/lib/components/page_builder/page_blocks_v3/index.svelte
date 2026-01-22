@@ -61,8 +61,8 @@
 
 <script lang="ts">
 	// import components & types
-	import DataFeed, { type DataFeedData } from "./organisms/DataFeed/index.svelte";
 	import CardRow, { type CardRowData } from "./organisms/CardRow.svelte";
+	import DataFeed, { type DataFeedData } from "./organisms/DataFeed/index.svelte";
 	import Hero, { type HeroData } from "./organisms/Hero.svelte";
 
 
@@ -72,11 +72,7 @@
 
 <template>
 	{#each blocks?.map((c) => c?.item) ?? [] as data}
-		{#if data?.__typename === "page_blocks_v3_organism_card_carousel"}
-			<!--
-			<CardCarousel {data} />
-			-->
-		{:else if data?.__typename === "page_blocks_v3_organism_card_row"}
+		{#if data?.__typename === "page_blocks_v3_organism_card_row"}
 			<CardRow {data} {projectData} />
 		{:else if data?.__typename === "page_blocks_v3_organism_data_feed"}
 			<DataFeed {data} />

@@ -185,6 +185,8 @@
 
 <style lang="scss">
 	.hero {
+		z-index: 3; // stack this on top of the header background
+
 		grid-column: viewport;
 		width: 100%;
 		//min-height: calc(200vh + var(--expertise-height) * 1px);
@@ -283,6 +285,13 @@
 
 			> .project-headings {
 				grid-column: sixth-start 1 / sixth-end 4;
+				@media (max-width: 62.5em) {
+					grid-column: third-start 1 / third-end 2;
+				}
+				@media (max-width: 31.25em) {
+					grid-column: main;
+				}
+
 				height: 100vh;
 				box-sizing: border-box;
 				padding-top: calc(var(--GRID-CELL) * 2);
@@ -310,6 +319,7 @@
 				> h2 {
 					opacity: 0;
 					color: var(--COLOR-BLACK);
+					width: clamp(100%, 22ch, 96vw);
 				}
 			}
 			> .project-expertise {
@@ -322,6 +332,13 @@
 				padding-top: calc(var(--GRID-CELL) * 2);
 				margin-bottom: calc(100vh - (var(--GRID-CELL) * 2 + (var(--headings-height) + var(--expertise-height)) * 1px));
 
+				@media (max-width: 31.25em) {
+					grid-column: main;
+					display: flex;
+					flex-direction: row;
+					row-gap: var(--GRID-CELL);
+				}
+
 				> .project-type,
 				> .project-sector {
 					width: 100%;
@@ -330,10 +347,18 @@
 
 				> .project-type {
 					grid-column: sixth-start 1 / sixth-end 2;
+
+					@media (max-width: 62.5em) {
+						grid-column: third-start 1 / third-end 1;
+					}
 				}
 
 				> .project-sector {
 					grid-column: sixth-start 3 / sixth-end 4;
+
+					@media (max-width: 62.5em) {
+						grid-column: third-start 2 / third-end 2;
+					}
 				}
 			}
 		}

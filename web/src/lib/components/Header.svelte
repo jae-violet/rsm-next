@@ -16,11 +16,7 @@
 	export let headerHeight;
 	export let navMenu;
 
-	$: checkActiveRoute = (path: string): boolean => {
-		return path == $page.url.pathname;
-	};
-
-	let menuOpen = false;
+	let menuOpen: boolean = false;
 
 	function toggleMenu() {
 		menuOpen = !menuOpen;
@@ -36,8 +32,13 @@
 		}
 	}
 
-	let oneLevelUpLink = "";
-	let oneLevelUpText = "";
+	$: checkActiveRoute = (path: string): boolean => {
+		return path == $page.url.pathname;
+	};
+
+	let navParentLink: string = "";
+	let navParentText: string = "";
+	let navParentCta: string = "Return to";
 
 	afterNavigate(async () => {
 		if ($page.url.pathname != "" && $page.url.pathname != "/") {
@@ -45,28 +46,29 @@
 				let link = item.nav_menu_links_id;
 				if (link.link_path == $page.url.pathname) {
 					// top-level navigation
-					oneLevelUpLink = "/";
-					oneLevelUpText = "Back to Home";
+					navParentLink = "/";
+					navParentText = "Homepage";
 					break root_links;
 				}
 
 				for (let childItem of link.link_children) {
 					let childLink = childItem.nav_menu_links_child_id;
 					if (childLink.link_path == $page.url.pathname) {
-						oneLevelUpLink = link.link_path;
-						oneLevelUpText = `Back to ${link.link_text}`;
+						navParentLink = link.link_path;
+						navParentText = link.link_text;
 						break root_links;
 					}
 				}
 			}
 
-			if (oneLevelUpLink == "") {
-				oneLevelUpLink = "/";
-				oneLevelUpText = "Back to Home";
+			if (navParentLink == "") {
+				navParentLink = "/";
+				navParentText = "Homepage";
 			}
 		}
 
 		if ($page.url.pathname.startsWith("/work") && $page.url.pathname != "/work") {
+			navParentCta = "View more";
 			let urlFilters = getProjectFiltersFromUrl($page.url.searchParams);
 
 			let serviceSlugs = Array.from(urlFilters.serviceFilterSlugs);
@@ -76,13 +78,12 @@
 
 			let totalFilterCount = serviceSlugs.length + marketSlugs.length;
 			if (totalFilterCount == 0) {
-				oneLevelUpLink = "/work";
-				oneLevelUpText = "See more Work";
-			}
-			else if (totalFilterCount == 1) {
+				navParentLink = "/work";
+				navParentText = "Work";
+			} else if (totalFilterCount == 1) {
 				if (serviceSlugs.length > 0) {
 					let serviceSlug = serviceSlugs[0];
-					oneLevelUpLink = `/services/${serviceSlug}`;
+					navParentLink = `/services/${serviceSlug}`;
 					let response = await request(env.PUBLIC_DIRECTUS_API_URL, `
 						query ServiceTitle {
 						  services(filter:  {
@@ -92,11 +93,10 @@
 						  }
 						}
 					`);
-					oneLevelUpText = "See more " + response.services[0].name;
-				}
-				else if (marketSlugs.length > 0) {
+					navParentText = response.services[0].name;
+				} else if (marketSlugs.length > 0) {
 					let marketSlug = marketSlugs[0];
-					oneLevelUpLink = `/markets/${marketSlug}`;
+					navParentLink = `/markets/${marketSlug}`;
 					let response = await request(env.PUBLIC_DIRECTUS_API_URL, `
 						query MarketTitle {
 						  markets(filter:  {
@@ -106,13 +106,24 @@
 						  }
 						}
 					`);
-					oneLevelUpText = "See more " + response.markets[0].name;
+					navParentText = response.markets[0].name;
 				}
+			} else {
+				navParentLink = `/work${makeProjectFilterUrlParams(urlFilters.serviceFilterSlugs, urlFilters.marketFilterSlugs)}`;
+				navParentText = "Work";
 			}
-			else {
-				oneLevelUpLink = `/work${makeProjectFilterUrlParams(urlFilters.serviceFilterSlugs, urlFilters.marketFilterSlugs)}`;
-				oneLevelUpText = "See more Work";
-			}
+		}
+
+		if ($page.url.pathname.startsWith("/services")) {
+			navParentLink = "/expertise";
+			navParentCta = "View more";
+			navParentText = "Services";
+		}
+
+		if ($page.url.pathname.startsWith("/markets")) {
+			navParentLink = "/expertise#markets";
+			navParentCta = "View more";
+			navParentText = "Markets";
 		}
 	});
 </script>
@@ -129,13 +140,11 @@
 							</g>
 						</svg>
 					</a>
-					<!--
-					<span>·</span>
-					<p>Principle Centered Design</p>
-					-->
 				</div>
 				<div>
-					<a href={oneLevelUpLink}> {oneLevelUpText} </a>
+					<a href={navParentLink}>
+						{navParentCta} {navParentText}
+					</a>
 				</div>
 				<div
 					class="menu-button"
@@ -170,7 +179,7 @@
 	header {
 		position: sticky;
 		top: 0;
-		z-index: 10;
+		z-index: 4;
 
 		padding: 1.333rem 0;
 
@@ -187,14 +196,62 @@
 	}
 
 	div.bg {
+		z-index: 2; // sandwich this between the menu and the content
 		position: sticky;
-		z-index: 7;
 		top: 0;
 		left: 0;
 		width: 100%;
-		margin-top: calc(var(--HEADER-HEIGHT) * -1);
 		height: var(--HEADER-HEIGHT);
-		//background: var(--bg-color, white);
+		margin-top: calc(var(--HEADER-HEIGHT) * -1);
+		pointer-events: none;
+
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: calc(100vh / 3);
+			background: linear-gradient(
+				rgba(255,255,255,1) 0%,
+				rgba(255,255,255,0.81) 10%,
+				rgba(255,255,255,0.64) 20%,
+				rgba(255,255,255,0.49) 30%,
+				rgba(255,255,255,0.36) 40%,
+				rgba(255,255,255,0.25) 50%,
+				rgba(255,255,255,0.16) 60%,
+				rgba(255,255,255,0.09) 70%,
+				rgba(255,255,255,0.04) 80%,
+				rgba(255,255,255,0.01) 90%,
+				rgba(255,255,255,0) 100%
+			);
+			opacity: 0.618;
+		}
+
+		&::after {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: calc(100vh / 3);
+			mask: linear-gradient(
+				rgba(0,0,0,1) 0%,
+				rgba(0,0,0,0.81) 10%,
+				rgba(0,0,0,0.64) 20%,
+				rgba(0,0,0,0.49) 30%,
+				rgba(0,0,0,0.36) 40%,
+				rgba(0,0,0,0.25) 50%,
+				rgba(0,0,0,0.16) 60%,
+				rgba(0,0,0,0.09) 70%,
+				rgba(0,0,0,0.04) 80%,
+				rgba(0,0,0,0.01) 90%,
+				rgba(0,0,0,0) 100%
+			);
+			backdrop-filter: blur(1rem);
+		}
 	}
 
 	.wrapper {
